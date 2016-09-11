@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
   </head>
   <body>
-    <header class="page-header">
-      <nav class="page-header__nav">
-        <div class="page-header__logo"><img src="http://placehold.it/150x100" alt=""></div>
-        <ul class="page-header__list">
-          <li>Каталог товаров</li>
-          <li>Вязание на заказ</li>
-          <li>Поиск по сайту</li>
-          <li>Корзина: пока пуста</li>
-        </ul>
-        <img src="http://placehold.it/150x100" class="page-header__close" alt="">
-      </nav>
-    </header>
-
+  <header class="page-header">
+    <nav class="page-header__nav">
+      <div class="page-header__logo"><a href="#"><img src="http://placehold.it/150x100" alt=""></a></div>
+      <a href="#"><img src="http://placehold.it/150x100" class="page-header__close" alt=""></a>
+      <ul class="page-header__list">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Вязание на заказ</a></li>
+        <li><a href="#">Поиск по сайту</a></li>
+        <li><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
     <h1>Вязание на заказ</h1>
+  </header>
 
 
-    <section class="form">
-      <div class="form__text">
+    <form>
+      <section class="form__text">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-      </div>
-      <div class="form__type">
-        <p class="form__type-title">Тип</p>
+      </section>
+      <section class="form__type">
+        <h2 class="form__type-title">Тип</h2>
         <label><input type="radio" name="answer">Аксессуар для интерьера</label><br>
         <label><input type="radio" name="answer">Детская игрушка</label>
-      </div>
-      <div class="form__color">
-        <p class="form__color-title">Цвет</p>
+      </section>
+      <section class="form__color">
+        <h2 class="form__color-title">Цвет</h2>
         <label><input type="checkbox" checked/>Белый</label>
         <label><input type="checkbox" checked/>Серый</label>
         <label><input type="checkbox"/>«Тиффани»</label>
         <label><input type="checkbox"/>Черный</label>
         <label><input type="checkbox"/>Розовый</label>
         <label><input type="checkbox"/>Оранжевый</label>
-      </div>
-      <div class="form__data">
-        <p class="form__data-title">Фио</p>
+      </section>
+      <section class="form__data">
+        <h2 class="form__data-title">Фио</h2>
         <p>Имя:<br>
           <input type="text" placeholder="Введите ваше имя" required>
         </p>
@@ -60,9 +59,9 @@
           <textarea name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </p>
         <p class="form__data-required">Все поля обязательны для заполнения</p>
-      </div>
-      <a href="#" class="form__send">Отправить заказ</a>
-    </section>
+      </section>
+      <button href="#" class="form__send">Отправить заказ</button>
+    </form>
 
     <footer class="page-footer">
       <div class="social">

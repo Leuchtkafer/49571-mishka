@@ -1,115 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
   </head>
   <body>
-    <header class="page-header">
-      <nav class="page-header__nav">
-        <div class="page-header__logo"><img src="http://placehold.it/150x100" alt=""></div>
-          <ul class="page-header__list">
-            <li>Каталог товаров</li>
-            <li>Вязание на заказ</li>
-            <li>Поиск по сайту</li>
-            <li>Корзина: пока пуста</li>
-          </ul>
-          <img src="http://placehold.it/150x100" class="page-header__close" alt="">
-      </nav>
-      <div class="page-title">
-        <h1>Милые штуки ручной работы для дома</h1>
-      </div>
-    </header>
+  <header class="page-header">
+    <nav class="page-header__nav">
+      <div class="page-header__logo"><a href="#"><img src="http://placehold.it/150x100" alt=""></a></div>
+      <a href="#"><img src="http://placehold.it/150x100" class="page-header__close" alt=""></a>
+      <ul class="page-header__list">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Вязание на заказ</a></li>
+        <li><a href="#">Поиск по сайту</a></li>
+        <li><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+    <h1>Милые штуки ручной работы для дома</h1>
+  </header>
 
     <section class="page-subsections">
       <div class="page-subsections__interior">
-        <h2>Предметы интерьера</h2>
+        <h2><a href="#">Предметы интерьера</a></h2>
       </div>
       <div class="page-subsections__toys">
-        <h2>Детские игрушки</h2>
+        <h2><a href="#">Детские игрушки</a></h2>
       </div>
     </section>
 
     <article class="product-week">
-      <div class="product-week__title">
+      <h2 class="product-week__title">
         Вязаные корзинки
-      </div>
-      <div class="product-week__subtitle">
+      </h2>
+      <span class="product-week__subtitle">
         Товар недели
-      </div>
-      <div class="product-week__description">
+      </span>
+      <p class="product-week__description">
         Экологически чистая пряжа, ручная работа. Доступна в шести расцветках, и трех размерах.
-      </div>
+      </p>
       <table class="product-week__table-size">
         <tr><td>Цвет:</td><td>«Тиффани»/серый</td></tr>
         <tr><td>Диаметр:</td><td>25 см</td></tr>
         <tr><td>Высота:</td><td>15 см</td></tr>
       </table>
       <img src="http://placehold.it/150x100" class="product-week_image" alt="">
-      <div class="product-week__price">
+      <span class="product-week__price">
         Цена: 990 руб.
-      </div>
+      </span>
       <a href="#" class="product-week__order">Заказать</a>
     </article>
 
     <section class="page-advantages">
-      <p class="page-advantages__title">Коротко о нас:</p>
+      <h2 class="page-advantages__title">Коротко о нас:</h2>
       <div class="page-advantages__plus">
         <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <p class="page-advantages__text">Экологически чистые материалы</p>
+        <h3 class="page-advantages__text"><span>Экологически чистые материалы</span></h3>
       </div>
 
       <div class="page-advantages__plus">
         <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <p class="page-advantages__text">Скандинавский стиль по российской цене</p>
+        <h3 class="page-advantages__text"><span>Скандинавский стиль по российской цене</span></h3>
       </div>
 
       <div class="page-advantages__plus">
         <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <p class="page-advantages__text">Увеличивает лайки на фотографиях</p>
+        <h3 class="page-advantages__text"><span>Увеличивает лайки на фотографиях</span></h3>
       </div>
 
       <div class="page-advantages__plus">
         <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <p class="page-advantages__text">Связано вручную с любовью и умилением</p>
+        <h3 class="page-advantages__text"><span>Связано вручную с любовью и умилением</span></h3>
       </div>
 
       <div class="page-advantages__plus">
         <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <p class="page-advantages__text">Поддержка российского производителя</p>
+        <h3 class="page-advantages__text"><span>Поддержка российского производителя</span></h3>
       </div>
 
       <div class="page-advantages__plus">
         <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <p class="page-advantages__text">Поставляется в подарочной упаковке</p>
+        <h3 class="page-advantages__text"><span>Поставляется в подарочной упаковке</span></h3>
       </div>
     </section>
 
-    <section class="page-feedback">
-      <h2>Отзывы</h2>
+    <article class="page-feedback">
+      <h3>Отзывы</h3>
       <div class="page-feedback__text">
         Я  молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
         как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
         фотографии сразу стали более стильнее, а также набирают больше лайков!
+        <span class="page-feedback__author-name">Анастасия Красильникова</span>
+        <span class="page-feedback__author-nick">@misssssiskras</span>
       </div>
-      <p class="page-feedback__author-name">Анастасия Красильникова</p>
-      <p class="page-feedback__author-nick">@misssssiskras</p>
       <div class="page-feedback__nav">
-        <span class="page-feedback__nav--left"></span>
-        <span class="page-feedback__nav--right"></span>
+        <a class="page-feedback__nav page-feedback__nav--left"></a>
+        <a class="page-feedback__nav page-feedback__nav--right"></a>
       </div>
       <a href="#" class="page-feedback__write">Написать</a>
-    </section>
+    </article>
 
     <section class="contacts">
       <h2>Контакты</h2>
       <div class="contacts__mail">
-        <span>e-mail:</span>
-        <span>info@mimimishkashop.ru</span>
+        <span class="contacts__mail-text">e-mail:</span>
+        <a href="#"><span>info@mimimishkashop.ru</span></a>
       </div>
       <div class="contacts__address">
-        <span>адрес:</span>
-        <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+        <span class="contacts__address-text">адрес:</span>
+        <a href="#"><span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></a>
       </div>
       <map class="contacts__map"></map>
       <a href="#" class="contacts__write">Напишите нам</a>
@@ -126,5 +124,17 @@
       <img src="http://placehold.it/150x100" class="page-footer__develop--icon" alt="">
     </div>
   </footer>
+
+  <section class="modal">
+    <h3 class="modal__title">Добавить в корзину</h3>
+    <span class="modal__subtitle">Выберите размер:</span>
+    <ul class="modal__list">
+      <li>S</li>
+      <li>M</li>
+      <li>L</li>
+    </ul>
+    <button href="#" class="modal__button">Добавить</button>
+  </section>
+
   </body>
 </html>
