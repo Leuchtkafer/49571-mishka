@@ -7,11 +7,11 @@
   <body>
   <header class="page-header">
     <nav class="page-header__nav">
-      <div class="page-header__logo"><a href="#"><img src="http://placehold.it/150x100" alt=""></a></div>
+      <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/150x100" alt=""></a></div>
       <a href="#"><img src="http://placehold.it/150x100" class="page-header__close" alt=""></a>
       <ul class="page-header__list">
-        <li><a href="#">Каталог товаров</a></li>
-        <li><a href="#">Вязание на заказ</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li><a href="form.html">Вязание на заказ</a></li>
         <li><a href="#">Поиск по сайту</a></li>
         <li><a href="#">Корзина: пока пуста</a></li>
       </ul>
@@ -20,58 +20,58 @@
   </header>
 
 
-    <form>
+    <form class="form">
       <section class="form__text">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </section>
       <section class="form__type">
         <h2 class="form__type-title">Тип</h2>
-        <label><input type="radio" name="answer">Аксессуар для интерьера</label><br>
+        <label><input type="radio" name="answer">Аксессуар для интерьера</label>
         <label><input type="radio" name="answer">Детская игрушка</label>
       </section>
       <section class="form__color">
         <h2 class="form__color-title">Цвет</h2>
-        <label><input type="checkbox" checked/>Белый</label>
-        <label><input type="checkbox" checked/>Серый</label>
-        <label><input type="checkbox"/>«Тиффани»</label>
-        <label><input type="checkbox"/>Черный</label>
-        <label><input type="checkbox"/>Розовый</label>
-        <label><input type="checkbox"/>Оранжевый</label>
+        <label><input type="checkbox" checked>Белый</label>
+        <label><input type="checkbox" checked>Серый</label>
+        <label><input type="checkbox">«Тиффани»</label>
+        <label><input type="checkbox">Черный</label>
+        <label><input type="checkbox">Розовый</label>
+        <label><input type="checkbox">Оранжевый</label>
       </section>
       <section class="form__data">
         <h2 class="form__data-title">Фио</h2>
-        <p>Имя:<br>
+        <label>Имя:
           <input type="text" placeholder="Введите ваше имя" required>
-        </p>
-        <p>Фамилия:<br>
+        </label>
+        <label>Фамилия:
           <input type="text" placeholder="Укажите фамилию" required>
-        </p>
-        <p>Отчество:<br>
+        </label>
+        <label>Отчество:
           <input type="text" placeholder="Отчество, если желаете" required>
-        </p>
-        <p>Тел<br>
+        </label>
+        <label>Тел
           <input type="tel" placeholder="+7 ХХХ ХХ ХХ" required>
-        </p>
-        <p>E-mail<br>
+        </label>
+        <label>E-mail
           <input type="email" placeholder="Ваш Email" required>
-        </p>
-        <p>Доп<br>
+        </label>
+        <label>Доп
           <textarea name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        </p>
-        <p class="form__data-required">Все поля обязательны для заполнения</p>
+        </label>
+        <span class="form__data-required">Все поля обязательны для заполнения</span>
       </section>
       <button href="#" class="form__send">Отправить заказ</button>
     </form>
 
     <footer class="page-footer">
-      <div class="social">
-        <img src="http://placehold.it/150x100" class="social__icon social__icon--inst" alt="">
-        <img src="http://placehold.it/150x100" class="social__icon social__icon--fb" alt="">
-        <img src="http://placehold.it/150x100" class="social__icon social__icon--tw" alt="">
-      </div>
+      <ul class="social">
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--inst" alt=""></li>
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--fb" alt=""></li>
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--tw" alt=""></li>
+      </ul>
       <div class="page-footer__develop">
         <span>Разработано</span>
-        <img src="http://placehold.it/150x100" class="page-footer__develop--icon" alt="">
+        <a href="#"><img src="http://placehold.it/150x100" class="page-footer__develop--icon" alt=""></a>
       </div>
     </footer>
 

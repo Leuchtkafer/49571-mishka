@@ -7,11 +7,11 @@
   <body>
     <header class="page-header">
       <nav class="page-header__nav">
-        <div class="page-header__logo"><a href="#"><img src="http://placehold.it/150x100" alt=""></a></div>
+        <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/150x100" alt=""></a></div>
         <a href="#"><img src="http://placehold.it/150x100" class="page-header__close" alt=""></a>
         <ul class="page-header__list">
-          <li><a href="#">Каталог товаров</a></li>
-          <li><a href="#">Вязание на заказ</a></li>
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
           <li><a href="#">Поиск по сайту</a></li>
           <li><a href="#">Корзина: пока пуста</a></li>
         </ul>
@@ -52,9 +52,9 @@
 
     <section class="production">
       <img src="http://placehold.it/150x100" class="product__icon" alt="">
-      <p class="production__title">
+      <span class="production__title">
         Процесс производства
-      </p>
+      </span>
       <div class="production__video">
         <video></video>
       </div>
@@ -66,11 +66,11 @@
     </main>
 
     <footer class="page-footer">
-      <div class="social">
-        <img src="http://placehold.it/150x100" class="social__icon social__icon--inst" alt="">
-        <img src="http://placehold.it/150x100" class="social__icon social__icon--fb" alt="">
-        <img src="http://placehold.it/150x100" class="social__icon social__icon--tw" alt="">
-      </div>
+      <ul class="social">
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--inst" alt=""></li>
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--fb" alt=""></li>
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--tw" alt=""></li>
+      </ul>
       <div class="page-footer__develop">
         <span>Разработано</span>
         <a href="#"><img src="http://placehold.it/150x100" class="page-footer__develop--icon" alt=""></a>
@@ -80,11 +80,11 @@
     <section class="modal">
       <h3 class="modal__title">Добавить в корзину</h3>
       <span class="modal__subtitle">Выберите размер:</span>
-      <ul class="modal__list">
-        <li>S</li>
-        <li>M</li>
-        <li>L</li>
-      </ul>
+      <form class="modal__list">
+        <label><input type="radio">S</label><br>
+        <label><input type="radio">M</label>
+        <label><input type="radio">L</label>
+      </form>
       <button href="#" class="modal__button">Добавить</button>
     </section>
 
