@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="page-header__nav">
+        <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/150x100" alt=""></a></div>
+        <a href="#"><img src="http://placehold.it/150x100" class="page-header__close" alt=""></a>
+        <ul class="page-header__list">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+      <h1>Каталог товаров</h1>
+    </header>
+
+    <main>
+    <article class="product">
+      <a href="#">
+        <img src="http://placehold.it/150x100" class="product__image" alt="">
+      </a>
+      <h2 class="product__title">Зайчик-попрыгайчик</h2>
+      <h3 class="product__description">Рост 30 см, вес 200 г</h3>
+      <span class="product__price">1 200 руб.</span>
+      <a href="#" class="product__icon product__icon--basket"></a>
+    </article>
+
+    <article class="product">
+      <a href="#">
+        <img src="http://placehold.it/150x100" class="product__image" alt="">
+      </a>
+      <h2 class="product__title">Корзинка для белья</h2>
+      <h3 class="product__description">Диаметр 15 см, высота 10 см</h3>
+      <span class="product__price">690 руб.</span>
+      <a href="#" class="product__icon product__icon--basket"></a>
+    </article>
+
+    <article class="product">
+      <a href="#">
+        <img src="http://placehold.it/150x100" class="product__image" alt="">
+      </a>
+      <h2 class="product__title">Большая корзинка для игрушек</h2>
+      <h3 class="product__description">Диаметр 30 см, высота 30 см</h3>
+      <span class="product__price">1 500 руб.</span>
+      <a href="#" class="product__icon product__icon--basket"></a>
+    </article>
+
+    <section class="production">
+      <img src="http://placehold.it/150x100" class="product__icon" alt="">
+      <span class="production__title">
+        Процесс производства
+      </span>
+      <div class="production__video">
+        <video></video>
+      </div>
+      <div class="production__text">
+        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a href="#" class="production__order">Сделать заказ</a>
+      </div>
+    </section>
+    </main>
+
+    <footer class="page-footer">
+      <ul class="social">
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--inst" alt=""></li>
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--fb" alt=""></li>
+        <li><img src="http://placehold.it/150x100" class="social__icon social__icon--tw" alt=""></li>
+      </ul>
+      <div class="page-footer__develop">
+        <span>Разработано</span>
+        <a href="#"><img src="http://placehold.it/150x100" class="page-footer__develop--icon" alt=""></a>
+      </div>
+    </footer>
+
+    <section class="modal">
+      <h3 class="modal__title">Добавить в корзину</h3>
+      <span class="modal__subtitle">Выберите размер:</span>
+      <form class="modal__list">
+        <label><input type="radio">S</label><br>
+        <label><input type="radio">M</label>
+        <label><input type="radio">L</label>
+        <button href="#" class="modal__button">Добавить</button>
+      </form>
+    </section>
+
+  </body>
+</html>
