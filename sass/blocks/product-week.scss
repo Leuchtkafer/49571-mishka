@@ -1,0 +1,39 @@
+.product-week {
+  padding: 35px 30px;
+  font-family: 'Open Sans', sans serif;
+  color: $font-color-grey;
+  font-size: 15px;
+
+  &__title {
+    @include title-h2;
+    font-size: 25px;
+    color: $font-color-black;
+  }
+
+  &__subtitle {
+    font-family: 'Open Sans Bold', sans serif;
+    font-size: 17px;
+    line-height: 16px;
+    color: $turquoise;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    line-height: 24px;
+  }
+
+  &__table-size {
+    line-height: 20px;
+  }
+
+  &__price {
+    font-family: 'Open Sans Bold', sans serif;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__product-week__order {
+    @include black-white-btn;
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,19 @@
+.page-subsections {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-size: 19px;
+  line-height: 24px;
+
+  &__interior {
+    background: $turquoise;
+  }
+  &__interior a {
+    color: #ffffff;
+  }
+
+  &__toys {
+    background: $dark-turquoise;
+  }
+  &__toys a {
+    color: #ffffff;
+  }
+}

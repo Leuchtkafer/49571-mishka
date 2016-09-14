@@ -1,0 +1,30 @@
+.page-feedback {
+  padding: 45px 30px;
+  font-family: 'Open Sans', sans-serif;
+  color: $font-color-grey;
+
+  h2 {
+    @include title-h2;
+    font-size: 25px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__author-name {
+    font-size: 18px;
+    line-height: 24px;
+    color: $font-color-black;
+  }
+
+  &__author-nick {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__write {
+    @include black-white-btn;
+  }
+}

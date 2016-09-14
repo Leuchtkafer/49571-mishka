@@ -1,0 +1,36 @@
+.form {
+  padding: 30px;
+
+  &__text {
+    font-size: 13px;
+    line-height: 24px;
+    color: $font-color-grey;
+  }
+
+  h2 {
+    color: $turquoise;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__type-title input, label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  &____data-required {
+    font-size: 14px;
+    color: $font-color-grey;
+  }
+
+  &__send {
+    margin: 38px 30px;
+    padding: 15px 50px;
+    font-size: 18px;
+    font-family: 'Open Sans Bold', sans-serif;
+    line-height: 16px;
+    color: $font-color-black;
+    text-transform: uppercase;
+  }
+}

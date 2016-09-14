@@ -1,0 +1,26 @@
+.production {
+  margin: 30px;
+
+  &__title {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__video {
+    background: url(/img/video-mobile@1x.jpg) no-repeat;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: $font-color-grey;
+    line-height: 24px;
+  }
+
+  &__order {
+    @include black-white-btn;
+    font-size: 17px;
+    line-height: 16px;
+  }
+}

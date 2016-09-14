@@ -1,0 +1,16 @@
+@mixin black-white-btn {
+  margin: 38px 30px;
+  padding: 15px 50px;
+  font-size: 18px;
+  font-family: 'Open Sans Bold', sans-serif;
+  line-height: 16px;
+  color: $font-color-black;
+  text-transform: uppercase;
+}
+
+@mixin title-h2 {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'Open Sans Bold', sans-serif;
+  color: $font-color-black;
+}

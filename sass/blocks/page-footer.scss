@@ -1,0 +1,10 @@
+.page-footer {
+  background: $bg-grey;
+  text-align: center;
+
+  &__develop {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
