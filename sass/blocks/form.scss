@@ -14,7 +14,7 @@
   }
 
   &__type-title input, label {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-open-sans;
     font-size: 17px;
     line-height: 18px;
   }
@@ -28,7 +28,7 @@
     margin: 38px 30px;
     padding: 15px 50px;
     font-size: 18px;
-    font-family: 'Open Sans Bold', sans-serif;
+    font-family: $font-open-sans-bold;
     line-height: 16px;
     color: $font-color-black;
     text-transform: uppercase;

@@ -3,20 +3,20 @@
 
   &__title {
     padding: 30px;
-    font-family: 'Open Sans Bold', sans-serif;
+    font-family: $font-open-sans-bold;
     font-size:  17px;
     line-height: 24px;
   }
 
   &__description {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-open-sans;
     font-size:  13px;
     line-height: 30px;
   }
 
   &__price {
     padding: 25px 0 35px 30px;
-    font-family: 'Open Sans Bold', sans-serif;
+    font-family: $font-open-sans-bold;
     font-size:  15px;
     line-height: 24px;
   }
