@@ -14,18 +14,16 @@
     font-size: 15px;
     color: $font-color-grey;
   }
+}
 
-  &__list input {
-    font-family: 'Open Sans Bold', sans-serif;
-    font-size: 17px;
-    line-height: 16px;
-  }
-
-  &__button {
-    background: $turquoise;
-    font-size: 17px;
-    line-height: 16px;
-    color: #ffffff;
-  }
-
+.modal__list input {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+}
+.modal__button {
+  background: $turquoise;
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
 }

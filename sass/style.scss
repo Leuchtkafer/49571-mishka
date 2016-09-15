@@ -1,3 +1,7 @@
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+
 @import "blocks/contacts.scss";
 @import "blocks/form.scss";
 @import "blocks/modal.scss";
@@ -10,6 +14,3 @@
 @import "blocks/product-week.scss";
 @import "blocks/production.scss";
 @import "blocks/social.scss";
-
-@import "global/fonts.scss";
-@import "global/mixins.scss";

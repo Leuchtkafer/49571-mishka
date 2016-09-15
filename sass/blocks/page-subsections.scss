@@ -9,11 +9,11 @@
   &__interior a {
     color: #ffffff;
   }
+}
 
-  &__toys {
-    background: $dark-turquoise;
-  }
-  &__toys a {
-    color: #ffffff;
-  }
+.page-subsections__toys {
+  background: $dark-turquoise;
+}
+.page-subsections__toys a {
+  color: #ffffff;
 }
