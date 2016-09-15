@@ -1,0 +1,13 @@
+.contacts {
+  padding: 30px 45px;
+  font-size: 15px;
+  font-family: $font-open-sans;
+  color: $font-color-grey;
+
+  h2 {
+    @include title-h2;
+  }
+  &__write {
+    @include black-white-btn;
+  }
+}
