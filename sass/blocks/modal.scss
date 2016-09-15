@@ -16,14 +16,18 @@
   }
 }
 
-.modal__list input {
-  font-family: $font-open-sans-bold;
-  font-size: 17px;
-  line-height: 16px;
+.modal__list {
+  input {
+    font-family: $font-open-sans-bold;
+    font-size: 17px;
+    line-height: 16px;
+  }
 }
-.modal__button {
-  background: $turquoise;
-  font-size: 17px;
-  line-height: 16px;
-  color: #ffffff;
+
+  .modal__button {
+    background: $turquoise;
+    font-size: 17px;
+    line-height: 16px;
+    color: #ffffff;
+  }
 }

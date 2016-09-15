@@ -2,7 +2,7 @@
   margin: 38px 30px;
   padding: 15px 50px;
   font-size: 18px;
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: $font-open-sans-bold;
   line-height: 16px;
   color: $font-color-black;
   text-transform: uppercase;
@@ -11,6 +11,6 @@
 @mixin title-h2 {
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: $font-open-sans-bold;
   color: $font-color-black;
 }

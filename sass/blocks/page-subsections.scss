@@ -5,15 +5,19 @@
 
   &__interior {
     background: $turquoise;
-  }
-  &__interior a {
-    color: #ffffff;
+
+    a {
+      color: #ffffff;
+    }
   }
 }
 
 .page-subsections__toys {
   background: $dark-turquoise;
+
+  a {
+    color: #ffffff;
+  }
+
 }
-.page-subsections__toys a {
-  color: #ffffff;
-}
+
