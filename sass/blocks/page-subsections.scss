@@ -1,13 +1,15 @@
 .page-subsections {
   font-family: $font-open-sans-bold;
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 0;
 
   &__interior {
     background: $turquoise;
 
     a {
+      display: block;
       color: #ffffff;
+      text-decoration: none;
+      width: 150px;
     }
   }
 }
@@ -16,8 +18,55 @@
   background: $dark-turquoise;
 
   a {
+    display: block;
     color: #ffffff;
+    text-decoration: none;
+    width: 150px;
   }
 
+}
+
+@media (min-width: 1151px) {
+  .page-subsections {
+    @include desktop-widths;
+    font-size: 0;
+    height: 102px;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  .page-subsections__interior {
+    display: inline-block;
+    width: 50%;
+    font-size: 19px;
+    line-height: 24px;
+    vertical-align: top;
+  }
+  .page-subsections__toys {
+    display: inline-block;
+    width: 50%;
+    font-size: 19px;
+    line-height: 24px;
+    vertical-align: top;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .page-subsections {
+    font-size: 0;
+  }
+  .page-subsections__interior {
+    display: inline-block;
+    width: 49%;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .page-subsections__toys {
+    display: inline-block;
+    width: 49%;
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  @include mobile-widths;
 }
 

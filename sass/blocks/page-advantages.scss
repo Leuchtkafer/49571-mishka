@@ -1,13 +1,60 @@
 .page-advantages {
-  padding: 30px;
+  margin: 0 auto;
 
   &__title {
+    width: auto;
     font-family: $font-open-sans-bold;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1151px) {
+  .page-advantages {
+    width: 700px;
+  }
+  .page-advantages__plus {
+    width: 49%;
+    display: inline-block;
+    padding: 50px 0;
+    vertical-align: top;
+  }
+  .page-advantages__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .page-advantages__text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .page-advantages {
+    @include tablet-widths;
+    width: 670px;
+  }
+  .page-advantages__plus {
+    width: 49%;
+    display: inline-block;
+    padding: 50px 0;
+    vertical-align: top;
+  }
+  .page-advantages__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .page-advantages__text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .page-advantages {
+    @include mobile-widths;
+    width: 260px;
+  }
+  .page-advantages__title {
     font-size: 25px;
     line-height: 30px;
   }
-
-  &__text {
+  .page-advantages__text {
     font-size: 17px;
   }
 }

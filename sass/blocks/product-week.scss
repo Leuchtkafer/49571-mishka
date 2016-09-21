@@ -1,8 +1,6 @@
 .product-week {
-  padding: 35px 30px;
   font-family: 'Open Sans', sans-serif;
   color: $font-color-grey;
-  font-size: 15px;
 
   &__title {
     @include title-h2;
@@ -12,10 +10,9 @@
 
   &__subtitle {
     font-family: $font-open-sans-bold;
-    font-size: 17px;
-    line-height: 16px;
     color: $turquoise;
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__description {
@@ -26,14 +23,111 @@
     line-height: 20px;
   }
 
-  &__price {
-    font-family: $font-open-sans-bold;
-    font-size: 17px;
-    line-height: 24px;
-  }
-
   &__product-week__order {
     @include black-white-btn;
+  }
+}
+.product-week__price {
+  display: block;
+  font-family: $font-open-sans-bold;
+}
+
+@media (min-width: 1151px) {
+    .product-week {
+      @include desktop-widths;
+      margin: 70px auto;
+    }
+    .product-week__detail {
+      position: relative;
+      display: inline-block;
+      width: 700px;
+      z-index: 1;
+    }
+    .product-week__title {
+      width: 100%;
+      padding: 55px 0;
+      text-align: left;
+      font-size: 53px;
+      line-height: 57px;
+    }
+   .product-week__subtitle {
+      display: inline-block;
+      width: 175px;
+      padding-top: 90px;
+      vertical-align: top;
+    }
+  .product-week__description {
+    width: 350px;
+  }
+  .product-week_image {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .product-week {
+    @include tablet-widths;
+    margin: 70px auto;
+  }
+  .product-week__detail {
+    position: relative;
+    width: 668px;
+  }
+  .product-week__title {
+    width: 100%;
+    padding: 55px 0;
+    text-align: left;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .product-week__subtitle {
+    float: right;
+    width: 175px;
+    padding-top: 90px;
+    vertical-align: top;
+  }
+  .product-week__description {
+    width: 334px;
     font-size: 17px;
+    line-height: 30px;
+  }
+  .product-week_image {
+    position: absolute;
+    top: 169px;
+    right: 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .product-week {
+    margin: 0 30px;
+    position: relative;
+  }
+  .product-week__title {
+    width: 100%;
+    padding: 55px 0;
+    text-align: left;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .product-week__subtitle {
+    position: absolute;
+    top: 10px;
+    width: 175px;
+    padding-top: 90px;
+    text-align: left;
+  }
+  .product-week__description {
+    width: 334px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .product-week_image {
+    width: 100%;
+  }
+  .product-week__price {
+    font-size: 17px;
+    line-height: 24px;
   }
 }

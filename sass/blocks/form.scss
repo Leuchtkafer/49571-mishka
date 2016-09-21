@@ -1,22 +1,18 @@
 .form {
-  padding: 30px;
-
   &__text {
-    font-size: 13px;
-    line-height: 24px;
     color: $font-color-grey;
   }
 
   h2 {
+    display: inline-block;
     color: $turquoise;
     line-height: 16px;
     text-transform: uppercase;
   }
 
   &__type-title input, label {
-    font-family: $font-open-sans;
-    font-size: 17px;
-    line-height: 18px;
+    font-family: $font-open-sans-bold;
+    display: block;
   }
 
   &____data-required {
@@ -34,3 +30,168 @@
     text-transform: uppercase;
   }
 }
+.form__color, .form__contact--content {
+  background: $bg-grey;
+}
+
+@media (min-width: 1151px) {
+  .form__text {
+    padding-bottom: 60px;
+    margin: 0 175px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  h2 {
+    padding-top: 70px;
+    width: 175px;
+    font-size: 17px;
+    vertical-align: top;
+    text-align: center;
+  }
+  .form__column-right {
+    display: inline-block;
+    width: 700px;
+    padding-top: 70px;
+    padding-right: 175px;
+  }
+  .form__type {
+    @include desktop-widths;
+  }
+  .form__type label {
+    display: block;
+  }
+  .form__type  {
+    @include desktop-widths;
+    height: 178px;
+  }
+  .form__color {
+    @include desktop-widths;
+    height: 254px;
+  }
+  .form__data {
+    @include desktop-widths;
+    height: 322px;
+  }
+  .form__contact {
+    @include desktop-widths;
+    height: 250px;
+  }
+  .form__add {
+    @include desktop-widths;
+    height: 446px;
+  }
+  .form__add textarea {
+    width: 700px;
+    height: 138px;
+    border-color: #000000;
+  }
+  .form__color input {
+    display: inline-block;
+  }
+  .form__data-required {
+    float: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+  .form__column-right {
+    display: inline-block;
+    width: 78%;
+    padding-top: 70px;
+  }
+  h2 {
+    padding-top: 70px;
+    width: 170px;
+    font-size: 17px;
+    vertical-align: top;
+    text-align: left;
+  }
+  .form__type {
+    @include tablet-widths;
+  }
+  .form__type label {
+    display: block;
+  }
+  .form__type  {
+    @include tablet-widths;
+    height: 178px;
+  }
+  .form__color {
+    @include tablet-widths;
+    height: 254px;
+  }
+  .form__data {
+    @include tablet-widths;
+    height: 322px;
+  }
+  .form__contact {
+    @include tablet-widths;
+    height: 250px;
+  }
+  .form__add {
+    @include tablet-widths;
+    height: 446px;
+  }
+  .form__add textarea {
+    width: 500px;
+    height: 138px;
+    border-color: #000000;
+  }
+  .form__color input {
+    display: inline-block;
+  }
+  .form__data-required {
+    float: right;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px)  {
+  .form__text {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .form__type-title input, label {
+    display: block;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  .form__column-right {
+    padding-top: 0;
+    display: block;
+    width: 78%;
+  }
+  h2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 170px;
+    font-size: 17px;
+    vertical-align: top;
+    text-align: left;
+  }
+  .form__type {
+    @include mobile-widths;
+  }
+  .form__type label {
+    display: block;
+  }
+  .form__type  {
+    @include mobile-widths;
+  }
+  .form__color {
+    @include mobile-widths;
+  }
+  .form__data {
+    @include mobile-widths;
+  }
+  .form__contact {
+    @include mobile-widths;
+  }
+  .form__add {
+    @include mobile-widths;
+  }
+  .form__add textarea {
+    width: 100%;
+    border-color: #000000;
+  }
+}
+

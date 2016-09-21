@@ -1,10 +1,42 @@
 .page-footer {
   background: $bg-grey;
   text-align: center;
+}
+.page-footer__develop {
+  width: 33%;
+  display: inline-block;
+  font-family: $font-open-sans-bold;
+}
+.page-footer__logo {
+  width: 33%;
+  display: inline-block;
+  text-align: left;
+}
 
-  &__develop {
-    font-family: $font-open-sans-bold;
+@media (min-width: 1151px) {
+  .page-footer {
+    @include desktop-widths;
+    height: 143px;
+    line-height: 143px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .page-footer {
+    @include tablet-widths;
+    height: 143px;
+    line-height: 143px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .page-footer {
+    @include mobile-widths;
+    height: 156px;
+  }
+  .page-footer__develop {
     font-size: 19px;
     line-height: 18px;
+  }
+  .page-footer__logo {
+    display: none;
   }
 }
