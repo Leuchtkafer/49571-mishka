@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <nav class="page-header__nav">
-        <div class="page-header__logo"><a href="index.html"><img src="img/logo-mobile.svg" alt=""></a></div>
-        <a href="#"><img src="img/icon-menu-close.svg" class="page-header__close" alt=""></a>
+  <header class="page-header">
+    <div class="page-header__container">
+      <nav class="page-header__nav page-header--closed page-header__nav--nojs">
+        <button class="page-header__toggle" type="button"></button>
+        <div class="page-header__logo"><a href="index.html"></a></div>
         <ul class="page-header__list">
           <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="form.html">Вязание на заказ</a></li>
+          <li class="page-header__list--active"><a href="#"><img src="img/logo-mobile.svg" alt=""></a></li>
           <li><a href="#">Поиск по сайту</a></li>
           <li><a href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
+    </div>
       <h1>Каталог товаров</h1>
     </header>
 
@@ -28,39 +31,45 @@
         <a href="#">
           <img src="http://placehold.it/150x100" class="product__image" alt="">
         </a>
-        <h2 class="product__title">Зайчик-попрыгайчик</h2>
-        <h3 class="product__description">Рост 30 см, вес 200 г</h3>
-        <span class="product__price">1 200 руб.</span>
-        <a href="#" class="product__icon product__icon--basket"></a>
+        <div class="product--row">
+          <h2 class="product__title">Зайчик-попрыгайчик</h2>
+          <h3 class="product__description">Рост 30 см, вес 200 г</h3>
+          <span class="product__price">1 200 руб.</span>
+          <a href="#" class="product__icon product__icon--basket"></a>
+        </div>
       </article>
 
       <article class="product">
         <a href="#">
           <img src="http://placehold.it/150x100" class="product__image" alt="">
         </a>
-        <h2 class="product__title">Корзинка для белья</h2>
-        <h3 class="product__description">Диаметр 15 см, высота 10 см</h3>
-        <span class="product__price">690 руб.</span>
-        <a href="#" class="product__icon product__icon--basket"></a>
+        <div class="product--row">
+          <h2 class="product__title">Корзинка для белья</h2>
+          <h3 class="product__description">Диаметр 15 см, высота 10 см</h3>
+          <span class="product__price">690 руб.</span>
+          <a href="#" class="product__icon product__icon--basket"></a>
+        </div>
       </article>
 
       <article class="product">
         <a href="#">
           <img src="http://placehold.it/150x100" class="product__image" alt="">
         </a>
-        <h2 class="product__title">Большая корзинка для игрушек</h2>
-        <h3 class="product__description">Диаметр 30 см, высота 30 см</h3>
-        <span class="product__price">1 500 руб.</span>
-        <a href="#" class="product__icon product__icon--basket"></a>
+        <div class="product--row">
+          <h2 class="product__title">Большая корзинка для игрушек</h2>
+          <h3 class="product__description">Диаметр 30 см, высота 30 см</h3>
+          <span class="product__price">1 500 руб.</span>
+          <a href="#" class="product__icon product__icon--basket"></a>
+        </div>
       </article>
     </div>
 
     <section class="production">
-      <img src="" class="product__icon" alt="">
       <div class="production__video">
         <video></video>
       </div>
       <div class="production__detail">
+        <img src="img/icon-video.svg" class="product__icon" alt="">
         <span class="production__title">
           Процесс производства
         </span>
@@ -73,21 +82,23 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
-      </div>
-      <ul class="social">
-        <li><img src="img/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>
-        <li><img src="img/icon-fb.svg" class="social__icon social__icon--fb" alt=""></li>
-        <li><img src="img/icon-twitter.svg" class="social__icon social__icon--tw" alt=""></li>
-      </ul>
-      <div class="page-footer__develop">
-        <span>Разработано</span>
-        <a href="#"><img src="img/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
+      <div class="page-footer__container">
+        <div class="page-footer__logo">
+          <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
+        </div>
+        <ul class="social">
+          <li><img src="img/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>
+          <li><img src="img/icon-fb.svg" class="social__icon social__icon--fb" alt=""></li>
+          <li><img src="img/icon-twitter.svg" class="social__icon social__icon--tw" alt=""></li>
+        </ul>
+        <div class="page-footer__develop">
+          <span>Разработано</span>
+          <a href="#"><img src="img/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
+        </div>
       </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal element-invisible">
       <h3 class="modal__title">Добавить в корзину</h3>
       <span class="modal__subtitle">Выберите размер:</span>
       <form class="modal__list">
@@ -97,6 +108,8 @@
         <button href="#" class="modal__button">Добавить</button>
       </form>
     </section>
+    <div class="modal-shadow element-invisible"></div>
 
+  <script src="js/script.js"></script>
   </body>
 </html>

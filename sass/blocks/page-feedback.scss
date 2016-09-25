@@ -1,62 +1,76 @@
 .page-feedback {
+  display: flex;
+  flex-wrap: wrap;
   font-family: $font-open-sans;
   color: $font-color-grey;
   background: url(/img/review@1x.jpg) no-repeat;
-
-  h2 {
-    @include title-h2;
-  }
-  &__author-name {
-    display: block;
-    color: $font-color-black;
-    font-family: $font-open-sans-bold;
-  }
-  &__write {
-    @include black-white-btn;
-  }
+}
+.page-feedback h2 {
+  @include title-h2;
+}
+.page-feedback__author-name {
+  display: block;
+  color: $font-color-black;
+  font-family: $font-open-sans-bold;
+}
+.page-feedback__write {
+  @include black-white-btn;
 }
 
 @media (min-width: 1151px) {
   .page-feedback {
     @include desktop-widths;
-    position: relative;
+    margin-bottom: 80px;
+    padding-bottom: 100px;
+    padding-left: 175px;
     background-position-x: 4.35%;
-    padding: 0 calc(4.35% + 175px) 100px;
   }
   .page-feedback h2 {
+    flex-grow: 1;
     padding: 70px 0 50px;
     font-size: 53px;
     line-height: 57px;
+    order: 1;
   }
   .page-feedback__text {
+    padding-right: 188px;
     font-size: 17px;
     line-height: 30px;
+    order: 3;
   }
   .page-feedback__write {
-    position: absolute;
-    right: 26px;
-    top: 46px;
+    height: 17px;
+    margin-top: 70px;
+    order: 2;
+  }
+  .page-feedback__author-name {
+    padding-top: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 1150px) {
   .page-feedback {
     @include tablet-widths;
     padding-bottom: 55px;
-    position: relative;
   }
   .page-feedback h2 {
+    flex-grow: 1;
     padding: 70px 0 50px;
     font-size: 43px;
     line-height: 50px;
+    order: 1;
   }
   .page-feedback__text {
     font-size: 17px;
     line-height: 30px;
+    order: 3;
   }
   .page-feedback__write {
-    position: absolute;
-    right: 26px;
-    top: 46px;
+    height: 17px;
+    margin-top: 70px;
+    order: 2;
+  }
+  .page-feedback__author-name {
+    padding-top: 50px;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -66,6 +80,7 @@
     background: none;
   }
   .page-feedback h2 {
+    padding: 35px 0;
     font-size: 25px;
   }
   .page-feedback__text {
@@ -82,6 +97,8 @@
     line-height: 30px;
   }
   .page-feedback__write {
+    width: 100%;
+    margin-top: 40px;
     text-align: center;
   }
 }

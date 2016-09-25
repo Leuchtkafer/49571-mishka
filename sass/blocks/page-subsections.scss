@@ -1,72 +1,48 @@
 .page-subsections {
+  display: flex;
+  flex-wrap: wrap;
   font-family: $font-open-sans-bold;
   font-size: 0;
-
-  &__interior {
-    background: $turquoise;
-
-    a {
-      display: block;
-      color: #ffffff;
-      text-decoration: none;
-      width: 150px;
-    }
-  }
 }
-
+.page-subsections__interior {
+  background: $turquoise;
+}
+.page-subsections a {
+  display: block;
+  width: 175px;
+  padding: 30px 0 30px 35px;
+  color: #ffffff;
+  text-decoration: none;
+}
 .page-subsections__toys {
   background: $dark-turquoise;
-
-  a {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    width: 150px;
-  }
-
+}
+.page-subsections__interior, .page-subsections__toys {
+  font-size: 14px;
+  line-height: 30px;
 }
 
 @media (min-width: 1151px) {
   .page-subsections {
     @include desktop-widths;
-    font-size: 0;
-    height: 102px;
-    box-sizing: border-box;
-    vertical-align: top;
+    height: 119px;
   }
-  .page-subsections__interior {
-    display: inline-block;
+  .page-subsections__interior, .page-subsections__toys {
     width: 50%;
-    font-size: 19px;
-    line-height: 24px;
-    vertical-align: top;
-  }
-  .page-subsections__toys {
-    display: inline-block;
-    width: 50%;
-    font-size: 19px;
-    line-height: 24px;
-    vertical-align: top;
   }
 }
 @media (min-width: 768px) and (max-width: 1150px) {
   .page-subsections {
-    font-size: 0;
+    @include tablet-widths;
+    height: 115px;
   }
-  .page-subsections__interior {
-    display: inline-block;
-    width: 49%;
-    font-size: 19px;
-    line-height: 24px;
-  }
-  .page-subsections__toys {
-    display: inline-block;
-    width: 49%;
-    font-size: 19px;
-    line-height: 24px;
+  .page-subsections__interior, .page-subsections__toys {
+    width: 50%;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  @include mobile-widths;
+  .page-subsections__interior, .page-subsections__toys {
+    width: 100%;
+  }
 }
 

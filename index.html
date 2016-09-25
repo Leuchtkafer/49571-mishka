@@ -9,18 +9,19 @@
   </head>
   <body>
   <header class="page-header">
-    <nav class="page-header__nav">
-      <div class="page-header__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
-      </div>
-      <a href="#"><img src="img/icon-menu-close.svg" class="page-header__close" alt=""></a>
-      <ul class="page-header__list">
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a href="form.html">Вязание на заказ</a></li>
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Корзина: пока пуста</a></li>
-      </ul>
-    </nav>
+    <div class="page-header__container">
+      <nav class="page-header__nav page-header--closed page-header__nav--nojs">
+        <button class="page-header__toggle" type="button"></button>
+        <div class="page-header__logo"><a href="index.html"></a></div>
+        <ul class="page-header__list">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
+          <li class="page-header__list--active"><a href="#"><img src="img/logo-mobile.svg" alt=""></a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1>Милые штуки ручной работы для дома</h1>
   </header>
 
@@ -118,35 +119,41 @@
           <a href="#">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
         </div>
       </div>
-      <map class="contacts__map"><img src="https://placeholdit.imgix.net/~text?txtsize=49&txt=525%C3%97457&w=525&h=457" alt=""></map>
+      <map class="contacts__map">
+        <script type="text/javascript" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=leAE7_RHECE48CjgyZOWeDiQG8AG5OqF&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+      </map>
       <a href="#" class="contacts__write">Напишите нам</a>
     </section>
 
   <footer class="page-footer">
-    <div class="page-footer__logo">
-      <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
-    </div>
-    <ul class="social">
-      <li><img src="img/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>
-      <li><img src="img/icon-fb.svg" class="social__icon social__icon--fb" alt=""></li>
-      <li><img src="img/icon-twitter.svg" class="social__icon social__icon--tw" alt=""></li>
-    </ul>
-    <div class="page-footer__develop">
-      <span>Разработано</span>
-      <a href="#"><img src="img/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
+    <div class="page-footer__container">
+      <div class="page-footer__logo">
+        <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
+      </div>
+      <ul class="social">
+        <li><img src="img/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>
+        <li><img src="img/icon-fb.svg" class="social__icon social__icon--fb" alt=""></li>
+        <li><img src="img/icon-twitter.svg" class="social__icon social__icon--tw" alt=""></li>
+      </ul>
+      <div class="page-footer__develop">
+        <span>Разработано</span>
+        <a href="#"><img src="img/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
+      </div>
     </div>
   </footer>
 
-  <section class="modal">
-    <h3 class="modal__title">Добавить в корзину</h3>
-    <span class="modal__subtitle">Выберите размер:</span>
-    <form class="modal__list">
-      <label><input type="radio">S</label>
-      <label><input type="radio">M</label>
-      <label><input type="radio">L</label>
-      <button href="#" class="modal__button">Добавить</button>
-    </form>
-  </section>
+    <section class="modal element-invisible">
+      <h3 class="modal__title">Добавить в корзину</h3>
+      <span class="modal__subtitle">Выберите размер:</span>
+      <form class="modal__list">
+        <label><input type="radio">S</label>
+        <label><input type="radio">M</label>
+        <label><input type="radio">L</label>
+        <button href="#" class="modal__button">Добавить</button>
+      </form>
+    </section>
+  <div class="modal-shadow element-invisible"></div>
 
+  <script src="js/script.js"></script>
   </body>
 </html>

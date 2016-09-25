@@ -2,37 +2,53 @@
   background: $bg-grey;
   text-align: center;
 }
+.page-footer__container {
+  display: flex;
+}
 .page-footer__develop {
   width: 33%;
-  display: inline-block;
+  text-align: right;
   font-family: $font-open-sans-bold;
 }
 .page-footer__logo {
   width: 33%;
-  display: inline-block;
   text-align: left;
+}
+.page-footer__develop--icon {
+  display: inline-flex;
+  margin-left: 20px;
+  vertical-align: middle;
 }
 
 @media (min-width: 1151px) {
   .page-footer {
-    @include desktop-widths;
     height: 143px;
     line-height: 143px;
+  }
+  .page-footer__container {
+    @include desktop-widths;
   }
 }
 @media (min-width: 768px) and (max-width: 1150px) {
   .page-footer {
-    @include tablet-widths;
     height: 143px;
     line-height: 143px;
+  }
+  .page-footer__container {
+    @include tablet-widths;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .page-footer {
-    @include mobile-widths;
     height: 156px;
   }
+  .page-footer__container {
+    flex-wrap: wrap;
+    @include mobile-widths;
+  }
   .page-footer__develop {
+    width: 100%;
+    text-align: center;
     font-size: 19px;
     line-height: 18px;
   }

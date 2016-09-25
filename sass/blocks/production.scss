@@ -1,40 +1,45 @@
 .production {
-  &__title {
-    font-family: $font-open-sans-bold;
-  }
-
-  &__video {
-    background: url(/img/video-mobile@1x.jpg) no-repeat;
-  }
-
-  &__text {
-    font-family: $font-open-sans;
-    color: $font-color-grey;
-  }
-
-  &__order {
-    @include black-white-btn;
-    text-align: center;
-  }
+  display: flex;
+}
+.production__title {
+  display: flex;
+  font-family: $font-open-sans-bold;
 }
 .production__detail {
   border: 1px solid #ececec;
 }
+.production__video {
+  background: url(/img/video-mobile@1x.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.production__text {
+  font-family: $font-open-sans;
+  color: $font-color-grey;
+}
+.production__order {
+  display: flex;
+  @include black-white-btn;
+  text-align: center;
+}
 @media (min-width: 1151px) {
   .production {
     @include desktop-widths;
+    margin-bottom: 100px;
     height: 458px;
   }
   .production__video {
-    float: left;
     width: 682px;
   }
   .production__detail {
-    float: right;
     width: 368px;
-    padding: 50px;
+    padding: 40px 45px 0 70px;
+    box-sizing: border-box;
+  }
+  .product__icon {
+    margin-bottom: 30px;
   }
   .production__title {
+    padding-bottom: 45px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -42,10 +47,17 @@
     font-size: 15px;
     line-height: 30px;
   }
+  .production__order {
+    justify-content: center;
+    padding: 15px;
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1150px) {
   .production {
+    @include tablet-widths;
+    flex-wrap: wrap;
     height: 750px;
     width: 668px;
     margin: 0 auto;
@@ -54,19 +66,31 @@
     width: 100%;
   }
   .production__detail {
-    padding: 50px;
+    padding: 50px 50px 0 50px;
+    height: 275px;
+  }
+  .product__icon {
+    margin: 0 30px 30px 0;
   }
   .production__title {
+    padding-top: 6px;
     font-size: 20px;
     line-height: 24px;
+    display: inline-flex;
+    vertical-align: top;
   }
   .production__text {
     font-size: 15px;
     line-height: 30px;
   }
+  .production__order {
+    justify-content: center;
+    margin-top: 50px;
+  }
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .production {
+    flex-wrap: wrap;
     @include mobile-widths;
   }
   .production__video {
@@ -75,9 +99,15 @@
   .production__detail {
     padding: 30px;
   }
+  .product__icon {
+    margin: 0 15px 30px 0;
+  }
   .production__title {
+    width: 100px;
     font-size: 20px;
     line-height: 24px;
+    display: inline-flex;
+    vertical-align: top;
   }
   .production__text  {
     font-size: 13px;
@@ -88,6 +118,7 @@
     line-height: 24px;
   }
   .production__order {
+    margin: 27px 0;
     font-size: 17px;
     line-height: 16px;
   }

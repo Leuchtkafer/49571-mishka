@@ -1,10 +1,9 @@
 .social {
+  display: flex;
   width: 33%;
   list-style: none;
-  display: inline-block;
 
   li {
-    display: inline-block;
     width: 32%;
     vertical-align: top;
   }
@@ -18,7 +17,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .social {
     width: 100%;
-    height: 78px;
-    line-height: 78px;
+    line-height: 81px;
+    padding: 5px 85px;
   }
 }

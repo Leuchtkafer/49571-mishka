@@ -1,12 +1,15 @@
 .contacts {
+  display: flex;
+  flex-wrap: wrap;
   font-family: $font-open-sans;
   color: $font-color-grey;
-
-  &__write {
-    @include black-white-btn;
-    border: 2px solid $font-color-grey;
-    text-decoration: none;
-  }
+}
+.contacts__write {
+  @include black-white-btn;
+  border: 2px solid $font-color-grey;
+  text-decoration: none;
+  height: 17px;
+  text-align: center;
 }
 .contacts__mail a {
   color: $font-color-grey;
@@ -22,17 +25,15 @@
   vertical-align: text-top;
 }
 
-
 @media (min-width: 1151px) {
   .contacts {
     @include desktop-widths;
-    height: 653px;
+    padding-bottom: 100px;
   }
   .contacts__left {
-    width: 292px;
-    float: left;
-    padding-top: 90px;
     padding-left: 175px;
+    flex-grow: 1;
+    padding-top: 50px;
   }
   .contacts__left h2 {
     font-size: 53px;
@@ -45,15 +46,15 @@
     margin-top: 40px;
   }
   .contacts__mail-text, .contacts__address-text {
-    display: inline-block;
     padding-right: 25px;
   }
   .contacts__write {
-    float: left;
-    margin-left: 175px;
+    margin-top: -53px;
+    width: 157px;
+    margin-left: 176px;
   }
   .contacts__map {
-    float: right;
+    width: 525px;
   }
 }
 
@@ -62,26 +63,23 @@
     @include tablet-widths;
     height: 937px;
   }
-  h2 {
-    float: none;
+  .contacts h2 {
     font-size: 43px;
     padding-top: 70px;
+    padding-bottom: 55px;
   }
   .contacts__mail, .contacts__address {
-    display: inline-block;
-    margin: 40px 0 60px;
+    display: inline-flex;
     font-size: 17px;
   }
   .contacts__mail-text, .contacts__address-text {
     padding-right: 25px;
   }
   .contacts__mail {
-    padding-right: 8%;
+    padding-right: 55px;
   }
   .contacts__map {
     width: 100%;
-    display: block;
-    margin-bottom: 55px;
   }
   .contacts__write {
     margin: 0 auto;
@@ -93,22 +91,26 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .contacts {
     @include mobile-widths;
-    height: 900px;
+    height: 706px;
   }
-  h2 {
+  .contacts  h2 {
     @include title-h2;
+    margin-bottom: 30px;
     font-size: 18px;
   }
   .contacts__mail, .contacts__address {
-    width: 100%;
-    display: block;
-    margin: 40px 0 60px;
+    justify-content: space-between;
     font-size: 15px;
   }
+  .contacts__mail {
+    margin-bottom: 30px;
+  }
   .contacts__write {
-    margin: 0 auto;
-    width: 149px;
+    width: 100%;
     font-size: 18px;
+  }
+  .contacts map {
+    width: 100%;
   }
 }
 

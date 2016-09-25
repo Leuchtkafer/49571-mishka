@@ -9,16 +9,19 @@
   </head>
   <body>
   <header class="page-header">
-    <nav class="page-header__nav">
-      <div class="page-header__logo"><a href="index.html"><img src="img/logo-mobile.svg" alt=""></a></div>
-      <a href="#"><img src="img/icon-menu-close.svg" class="page-header__close" alt=""></a>
-      <ul class="page-header__list">
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a href="form.html">Вязание на заказ</a></li>
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Корзина: пока пуста</a></li>
-      </ul>
-    </nav>
+    <div class="page-header__container">
+      <nav class="page-header__nav page-header--closed page-header__nav--nojs">
+        <button class="page-header__toggle" type="button"></button>
+        <div class="page-header__logo"><a href="index.html"></a></div>
+        <ul class="page-header__list">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
+          <li class="page-header__list--active"><a href="#"><img src="img/logo-mobile.svg" alt=""></a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1>Вязание на заказ</h1>
   </header>
 
@@ -28,25 +31,27 @@
         </section>
         <section class="form__type">
           <h2 class="form__type-title">Тип</h2>
-          <div class="form__column-right">
+          <div class="form__detail">
             <label><input type="radio" name="answer">Аксессуар для интерьера</label>
             <label><input type="radio" name="answer">Детская игрушка</label>
           </div>
         </section>
-        <section class="form__color">
-          <h2 class="form__color-title">Цвет</h2>
-          <div class="form__column-right">
-            <label><input type="checkbox" checked>Белый</label>
-            <label><input type="checkbox" checked>Серый</label>
-            <label><input type="checkbox">«Тиффани»</label>
-            <label><input type="checkbox">Черный</label>
-            <label><input type="checkbox">Розовый</label>
-            <label><input type="checkbox">Оранжевый</label>
-          </div>
-        </section>
+        <div class="form__contact--content">
+          <section class="form__color">
+            <h2 class="form__color-title">Цвет</h2>
+            <div class="form__detail">
+                <label><input type="checkbox" checked>Белый</label>
+                <label><input type="checkbox" checked>Серый</label>
+                <label><input type="checkbox">«Тиффани»</label>
+                <label><input type="checkbox">Черный</label>
+                <label><input type="checkbox">Розовый</label>
+                <label><input type="checkbox">Оранжевый</label>
+            </div>
+          </section>
+        </div>
         <section class="form__data">
           <h2 class="form__data-title">Фио</h2>
-          <div class="form__column-right">
+          <div class="form__detail">
             <label>Имя:
               <input type="text" placeholder="Введите ваше имя" required>
             </label>
@@ -59,31 +64,31 @@
           </div>
         </section>
         <div class="form__contact--content">
-          <section class="form__contact">
+          <section class="form__contact-tel">
             <h2 class="form__contact-title">Тел</h2>
-            <div class="form__column-right">
+            <div class="form__detail">
               <label><input type="tel" placeholder="+7 ХХХ ХХ ХХ" required></label>
             </div>
+          </section>
+          <section class="form__contact-mail">
             <h2 class="form__contact-title">E-mail</h2>
-            <div class="form__column-right">
+            <div class="form__detail">
               <label><input type="email" placeholder="Ваш Email" required></label>
             </div>
           </section>
         </div>
         <section class="form__add">
           <h2 class="form__contact-title">Доп</h2>
-          <div class="form__column-right">
-            <label><textarea name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea></label>
-          </div>
           <button href="#" class="form__send">Отправить заказ</button>
-          <div class="form__column-right">
+          <div class="form__detail">
+            <label><textarea name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea></label>
             <span class="form__data-required">Все поля обязательны для заполнения</span>
           </div>
         </section>
-
       </form>
 
-    <footer class="page-footer">
+  <footer class="page-footer">
+    <div class="page-footer__container">
       <div class="page-footer__logo">
         <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
       </div>
@@ -96,7 +101,9 @@
         <span>Разработано</span>
         <a href="#"><img src="img/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
+  <script src="js/script.js"></script>
   </body>
 </html>
