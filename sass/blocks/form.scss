@@ -8,15 +8,51 @@
   display: flex;
   margin-bottom: 25px;
   font-family: $font-open-sans-bold;
+  outline: none;
 }
 .form__color label {
-  width: 30%;
   display: inline-flex;
 }
-.form [type="checkbox"], [type="radio"] {
-  width: 50px;
-  margin-right: 27px;
+.form [type="checkbox"], .form [type="radio"] {
+  display: none;
 }
+label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 13px;
+}
+
+.form__type label:before {
+  display: inline-flex;
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 27px;
+  background-color: #ffffff;
+  border: 2px solid $font-color-grey;
+  border-radius: 50%;
+}
+.form__color label:before {
+  display: inline-flex;
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 27px;
+  background-color: #f1f1f1;
+  border: 2px solid $font-color-grey;
+}
+
+.form__type input:checked label:before {
+  content: "\2022";
+  color: #62d1ba;
+  font-size: 85px;
+  text-align: center;
+  line-height: 43px;
+  display: block;
+}
+
 .form input[placeholder], .form__add textarea  {
   font-family: $font-open-sans;
   padding: 15px;
@@ -26,6 +62,16 @@
 .form__data label {
   display: flex;
   width: 100%;
+  height: 40px;
+}
+.form__data input, .form__contact-tel input, .form__contact-mail input {
+  width: 100%;
+  margin-left: 25px;
+  border: none;
+  border-bottom: 2px solid;
+}
+.form__contact-tel input, .form__contact-mail input {
+  background-color: $bg-grey;
 }
 .form__data-required {
     color: $font-color-grey;
@@ -58,6 +104,9 @@
     font-size: 17px;
     vertical-align: top;
   }
+  .form__detail {
+    width: 770px;
+  }
   .form__type  {
     @include desktop-widths;
     padding-top: 75px;
@@ -66,6 +115,9 @@
   .form__color {
     @include desktop-widths;
     padding-top: 75px;
+  }
+  .form__color label {
+    width: 27%;
   }
   .form__data {
     @include desktop-widths;
@@ -87,7 +139,7 @@
     border-color: #000000;
   }
   .form input, label {
-    height: 50px;
+    font-size: 19px;
   }
   .form__add input, label {
     height: auto;
@@ -117,9 +169,11 @@
     font-size: 17px;
     vertical-align: top;
   }
+  .form__detail {
+    width: 500px;
+  }
   .form__type  {
     @include tablet-widths;
-    padding-top: 75px;
     height: 178px;
   }
   .form__color {
@@ -147,10 +201,10 @@
     order: 1;
   }
   .form input, label {
-    height: 50px;
+    font-size: 19px;
   }
   .form__color label {
-    width: 49%;
+    width: 41%;
   }
   .form__add input, label {
     height: auto;
@@ -181,6 +235,10 @@
     width: 162px;
     font-size: 17px;
     vertical-align: top;
+  }
+  .form__detail {
+    display: flex;
+    flex-direction: column;
   }
   .form__type  {
     @include mobile-widths;
