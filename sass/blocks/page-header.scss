@@ -1,25 +1,200 @@
 .page-header {
-  margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  width: 100%;
   font-family: $font-open-sans;
-  background: url(/img/hero-mobile@1x.jpg) no-repeat;
+  background: url(/img/hero-mobile@1x.jpg) no-repeat $bg-grey center bottom;
+  border-bottom: 1px solid #e7e7e7;
+}
+.page-header h1 {
+  font-family: $font-open-sans-bold;
+  text-align: center;
+}
+.page-header__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+.page-header__nav {
+  display: flex;
+  background-color: #ffffff;
+}
+.page-header__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+}
+.page-header__list li a {
+  display: inline-flex;
+  text-decoration: none;
+  font-family: $font-open-sans-bold;
+  color: $font-color-black;
+  font-size: 17px;
+  line-height: 24px;
+}
 
-  &__list {
-    list-style: none;
 
-    li {
-      display: block;
-      font-size: 17px;
-      line-height: 24px;
-    }
+@media (min-width: 1151px) {
+  .page-header {
+    height: 716px;
+  }
+  .page-header__nav {
+    @include desktop-widths;
+    height: 90px;
+  }
+  .page-header__list--find {
+    display: none;
+  }
+  .page-header h1 {
+    width: 700px;
+    margin: 115px auto 0;
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .page-header__list li a {
+    height: 100%;
+    line-height: 90px;
+  }
+  .page-header__list li:nth-child(4) {
+    visibility: hidden;
+  }
+}
 
+@media (min-width: 768px) and (max-width: 1150px) {
+  .page-header {
+    height: 627px;
+  }
+  .page-header__nav {
+    @include tablet-widths;
+    height: 88px;
+  }
+  .page-header__list--find {
+    display: none;
+  }
+  .page-header h1 {
+    width: 700px;
+    margin: 115px auto 0;
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .page-header__list li a {
+    height: 100%;
+    line-height: 90px;
+  }
+  .page-header__list li:nth-child(1), li:nth-child(2), li:nth-child(4) {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .page-header__logo {
+    text-align: center;
+  }
+  .page-header__nav {
+    @include mobile-widths;
+    width: 100%;
+    height: 397px;
+    text-align: center;
+    line-height: 80px;
   }
   h1 {
-    background-color: $bg-grey;
+    width: 260px;
+    margin: 0 auto;
+    padding-top: 70px;
     font-size: 27px;
-    font-weight: bold;
     line-height: 30px;
+  }
+  .page-header__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-header__list li a {
+    display: block;
+    padding-left: 40px;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
+  }
+  .page-header__list li:nth-child(1) {
+    order: 2;
+  }
+  .page-header__list li:nth-child(2) {
+    order: 3;
+  }
+  .page-header__list li:nth-child(3) {
+    order: 1;
+  }
+  .page-header__list li:nth-child(4) {
+    order: 4;
+  }
+  .page-header__list li:nth-child(5) {
+    order: 5;
+  }
+
+  .page-header--opened .page-header__toggle {
+    top: 0;
+    right: auto;
+    left: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 36px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .page-header__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 50px;
+    font-size: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: none;
+  }
+  .page-header--closed .page-header__list--active {
+    display: block;
+  }
+  .page-header--closed .page-header__list {
+    display: none;
+  }
+
+  .page-header--closed .page-header__toggle::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #221f1f;
+    box-shadow: 0 8px 0 0 #221f1f,
+    0 16px 0 0 #221f1f;
+  }
+
+  .page-header--closed .page-header__toggle:active::before {
+    background-color: #221f1f;
+    box-shadow: 0 8px 0 0 #221f1f,
+    0 16px 0 0 #221f1f;
   }
 }
 

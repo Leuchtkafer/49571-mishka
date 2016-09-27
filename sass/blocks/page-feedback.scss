@@ -1,30 +1,105 @@
 .page-feedback {
-  padding: 45px 30px;
+  display: flex;
+  flex-wrap: wrap;
   font-family: $font-open-sans;
   color: $font-color-grey;
+  background: url(/img/review@1x.jpg) no-repeat;
+}
+.page-feedback h2 {
+  @include title-h2;
+}
+.page-feedback__author-name {
+  display: block;
+  color: $font-color-black;
+  font-family: $font-open-sans-bold;
+}
+.page-feedback__write {
+  @include black-white-btn;
+}
 
-  h2 {
-    @include title-h2;
+@media (min-width: 1151px) {
+  .page-feedback {
+    @include desktop-widths;
+    margin-bottom: 80px;
+    padding-bottom: 100px;
+    padding-left: 175px;
+    background-position-x: 4.35%;
+    box-sizing: border-box;
+  }
+  .page-feedback h2 {
+    flex-grow: 1;
+    padding: 70px 0 50px;
+    font-size: 53px;
+    line-height: 57px;
+    order: 1;
+  }
+  .page-feedback__text {
+    padding-right: 188px;
+    font-size: 17px;
+    line-height: 30px;
+    order: 3;
+  }
+  .page-feedback__write {
+    height: 17px;
+    margin-top: 70px;
+    order: 2;
+  }
+  .page-feedback__author-name {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .page-feedback {
+    @include tablet-widths;
+    padding-bottom: 55px;
+  }
+  .page-feedback h2 {
+    flex-grow: 1;
+    padding: 70px 0 50px;
+    font-size: 43px;
+    line-height: 50px;
+    order: 1;
+  }
+  .page-feedback__text {
+    font-size: 17px;
+    line-height: 30px;
+    order: 3;
+  }
+  .page-feedback__write {
+    height: 17px;
+    margin-top: 70px;
+    order: 2;
+  }
+  .page-feedback__author-name {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .page-feedback {
+    @include mobile-widths;
+    padding-bottom: 55px;
+    background: none;
+  }
+  .page-feedback h2 {
+    padding: 35px 0;
     font-size: 25px;
   }
-
-  &__text {
+  .page-feedback__text {
     font-size: 15px;
     line-height: 30px;
   }
-
-  &__author-name {
+  .page-feedback__author-name {
+    padding-top: 30px;
     font-size: 18px;
     line-height: 24px;
-    color: $font-color-black;
   }
-
-  &__author-nick {
+  .page-feedback__author-nick {
     font-size: 18px;
     line-height: 30px;
   }
-
-  &__write {
-    @include black-white-btn;
+  .page-feedback__write {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
   }
 }

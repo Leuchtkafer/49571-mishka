@@ -1,36 +1,296 @@
-.form {
-  padding: 30px;
+.form__text, .form__type, .form__color, .form__data, .form__contact-tel, .form__contact-mail, .form__add  {
+  display: flex;
+}
+.form__type{
+  width: 100%;
+}
+.form input, label {
+  display: flex;
+  margin-bottom: 25px;
+  font-family: $font-open-sans-bold;
+  outline: none;
+}
+.form__color label {
+  display: inline-flex;
+}
+.form [type="checkbox"], .form [type="radio"] {
+  display: none;
+}
+label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 13px;
+}
 
-  &__text {
-    font-size: 13px;
-    line-height: 24px;
+.form__type label:before {
+  display: inline-flex;
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 27px;
+  background-color: #ffffff;
+  border: 2px solid $font-color-grey;
+  border-radius: 50%;
+}
+.form__color label:before {
+  display: inline-flex;
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 27px;
+  background-color: #f1f1f1;
+  border: 2px solid $font-color-grey;
+}
+
+.form__type input:checked label:before {
+  content: "\2022";
+  color: #62d1ba;
+  font-size: 85px;
+  text-align: center;
+  line-height: 43px;
+  display: block;
+}
+
+.form input[placeholder], .form__add textarea  {
+  font-family: $font-open-sans;
+  padding: 15px;
+  font-size: 19px;
+  line-height: 18px;
+}
+.form__data label {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+.form__data input, .form__contact-tel input, .form__contact-mail input {
+  width: 100%;
+  margin-left: 25px;
+  border: none;
+  border-bottom: 2px solid;
+}
+.form__contact-tel input, .form__contact-mail input {
+  background-color: $bg-grey;
+}
+.form__data-required {
     color: $font-color-grey;
-  }
-
-  h2 {
-    color: $turquoise;
-    line-height: 16px;
+}
+.form__send {
+    @include black-white-btn;
     text-transform: uppercase;
-  }
+}
+.form__text {
+  color: $font-color-grey;
+}
+.form  h2 {
+  color: $turquoise;
+  text-transform: uppercase;
+}
+.form__contact--content {
+  width: 100%;
+  background: $bg-grey;
+}
 
-  &__type-title input, label {
-    font-family: $font-open-sans;
+@media (min-width: 1151px) {
+  .form__text {
+    width: 700px;
+    margin: 145px auto 45px;
     font-size: 17px;
-    line-height: 18px;
+    line-height: 30px;
   }
-
-  &____data-required {
-    font-size: 14px;
-    color: $font-color-grey;
+  .form h2 {
+    width: 175px;
+    font-size: 17px;
+    vertical-align: top;
   }
-
-  &__send {
-    margin: 38px 30px;
-    padding: 15px 50px;
-    font-size: 18px;
-    font-family: $font-open-sans-bold;
-    line-height: 16px;
-    color: $font-color-black;
-    text-transform: uppercase;
+  .form__detail {
+    width: 770px;
+  }
+  .form__type  {
+    @include desktop-widths;
+    padding-top: 75px;
+    height: 178px;
+  }
+  .form__color {
+    @include desktop-widths;
+    padding-top: 75px;
+  }
+  .form__color label {
+    width: 27%;
+  }
+  .form__data {
+    @include desktop-widths;
+    padding-top: 75px;
+  }
+  .form__contact-tel, .form__contact-mail {
+    @include desktop-widths;
+    padding-top: 75px;
+  }
+  .form__add {
+    @include desktop-widths;
+    flex-wrap: wrap;
+    padding-top: 75px;
+  }
+  .form__add textarea {
+    width: 700px;
+    height: 138px;
+    margin-bottom: 80px;
+    border-color: #000000;
+  }
+  .form input, label {
+    font-size: 19px;
+  }
+  .form__add input, label {
+    height: auto;
+  }
+  .form__send {
+    margin-top: -32px;
+    margin-bottom: 70px;
+    margin-left: 175px;
+    order: 2;
+  }
+  .form__data-required {
+    justify-content: flex-end;
+    width: 100%;
+    display: inline-flex;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1150px) {
+  .form__text {
+    width: 700px;
+    margin: 145px auto 45px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .form h2 {
+    width: 162px;
+    font-size: 17px;
+    vertical-align: top;
+  }
+  .form__detail {
+    width: 500px;
+  }
+  .form__type  {
+    @include tablet-widths;
+    height: 178px;
+  }
+  .form__color {
+    @include tablet-widths;
+    padding-top: 75px;
+  }
+  .form__data {
+    @include tablet-widths;
+    padding-top: 75px;
+  }
+  .form__contact-tel, .form__contact-mail {
+    @include  tablet-widths;;
+    padding-top: 75px;
+  }
+  .form__add {
+    @include tablet-widths;
+    flex-wrap: wrap;
+    padding-top: 75px;
+  }
+  .form__add textarea {
+    width: 500px;
+    height: 138px;
+    margin-bottom: 80px;
+    border-color: #000000;
+    order: 1;
+  }
+  .form input, label {
+    font-size: 19px;
+  }
+  .form__color label {
+    width: 41%;
+  }
+  .form__add input, label {
+    height: auto;
+  }
+  .form__send {
+    margin-top: -36px;
+    margin-bottom: 70px;
+    order: 2;
+  }
+  .form__data-required {
+    justify-content: flex-end;
+    width: 100%;
+    display: inline-flex;
+    font-size: 17px;
+    line-height: 30px;
+    order: 3;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px)  {
+  .form__text {
+    max-width: 260px;
+    margin: 30px auto 30px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .form h2 {
+    width: 162px;
+    font-size: 17px;
+    vertical-align: top;
+  }
+  .form__detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__type  {
+    @include mobile-widths;
+    padding-top: 25px;
+    height: 178px;
+  }
+  .form__color {
+    @include mobile-widths;
+    padding-top: 25px;
+  }
+  .form__data {
+    @include mobile-widths;
+    padding-top: 25px;
+  }
+  .form__contact-tel, .form__contact-mail {
+    @include  mobile-widths;
+    padding-top: 25px;
+  }
+  .form__add {
+    @include mobile-widths;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  }
+  .form__add textarea {
+    width: 100%;
+    height: 138px;
+    border-color: #000000;
+    order: 1;
+  }
+  .form input, label {
+    width: 100%;
+    height: 40px;
+  }
+  .form__color label {
+    width: 49%;
+  }
+  .form__add input, label {
+    height: auto;
+  }
+  .form__send {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 70px;
+    order: 2;
+  }
+  .form__data-required {
+    justify-content: flex-end;
+    width: 100%;
+    display: inline-flex;
+    font-size: 17px;
+    line-height: 30px;
+    order: 3;
+  }
+}
+

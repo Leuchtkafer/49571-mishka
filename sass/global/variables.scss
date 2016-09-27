@@ -5,3 +5,11 @@ $font-color-grey: #444444;
 $font-color-black: #000000;
 $font-open-sans: 'Open Sans', sans-serif;
 $font-open-sans-bold: 'Open Sans Bold', sans-serif;
+$mobile-widths-only: (max-width: 767px);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+

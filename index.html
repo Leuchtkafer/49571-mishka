@@ -3,20 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
   <header class="page-header">
-    <nav class="page-header__nav">
-      <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/150x100" alt=""></a></div>
-      <a href="#"><img src="http://placehold.it/150x100" class="page-header__close" alt=""></a>
-      <ul class="page-header__list">
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a href="form.html">Вязание на заказ</a></li>
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Корзина: пока пуста</a></li>
-      </ul>
-    </nav>
+    <div class="page-header__container">
+      <nav class="page-header__nav page-header--closed page-header__nav--nojs">
+        <button class="page-header__toggle" type="button"></button>
+        <ul class="page-header__list">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
+          <li class="page-header__list--active"><a href="#"><img src="img/logo-mobile.svg" alt=""></a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1>Милые штуки ручной работы для дома</h1>
   </header>
 
@@ -30,56 +34,58 @@
     </section>
 
     <article class="product-week">
-      <h2 class="product-week__title">
-        Вязаные корзинки
-      </h2>
       <span class="product-week__subtitle">
         Товар недели
       </span>
-      <p class="product-week__description">
-        Экологически чистая пряжа, ручная работа. Доступна в шести расцветках, и трех размерах.
-      </p>
-      <table class="product-week__table-size">
-        <tr><td>Цвет:</td><td>«Тиффани»/серый</td></tr>
-        <tr><td>Диаметр:</td><td>25 см</td></tr>
-        <tr><td>Высота:</td><td>15 см</td></tr>
-      </table>
-      <img src="img/triple-set-mobile@1x.jpg" class="product-week_image" alt="">
-      <span class="product-week__price">
-        Цена: 990 руб.
-      </span>
-      <a href="#" class="product-week__order">Заказать</a>
+      <div class="product-week__detail">
+          <h2 class="product-week__title">
+            Вязаные корзинки
+          </h2>
+          <p class="product-week__description">
+            Экологически чистая пряжа, ручная работа. Доступна в шести расцветках, и трех размерах.
+          </p>
+          <table class="product-week__table-size">
+            <tr><td>Цвет:</td><td>«Тиффани»/серый</td></tr>
+            <tr><td>Диаметр:</td><td>25 см</td></tr>
+            <tr><td>Высота:</td><td>15 см</td></tr>
+          </table>
+          <img src="img/triple-set-mobile@1x.jpg" class="product-week_image" alt="">
+          <span class="product-week__price">
+            Цена: 990 руб.
+          </span>
+          <a href="#" class="product-week__order">Заказать</a>
+        </div>
     </article>
 
     <section class="page-advantages">
       <h2 class="page-advantages__title">Коротко о нас:</h2>
       <div class="page-advantages__plus">
-        <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Экологически чистые материалы></h3>
+        <img src="img/icon-feature-1.svg" class="page-advantages__icon" alt="">
+        <h3 class="page-advantages__text">Экологически чистые материалы</h3>
       </div>
 
       <div class="page-advantages__plus">
-        <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
+        <img src="img/icon-feature-2.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Скандинавский стиль по российской цене</h3>
       </div>
 
       <div class="page-advantages__plus">
-        <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
+        <img src="img/icon-feature-3.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Увеличивает лайки на фотографиях</h3>
       </div>
 
       <div class="page-advantages__plus">
-        <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
+        <img src="img/icon-feature-4.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Связано вручную с любовью и умилением</h3>
       </div>
 
       <div class="page-advantages__plus">
-        <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
+        <img src="img/icon-feature-5.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Поддержка российского производителя</h3>
       </div>
 
       <div class="page-advantages__plus">
-        <img src="http://placehold.it/150x100" class="page-advantages__icon" alt="">
+        <img src="img/icon-feature-6.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Поставляется в подарочной упаковке</h3>
       </div>
     </section>
@@ -101,41 +107,52 @@
     </article>
 
     <section class="contacts">
-      <h2>Контакты</h2>
-      <div class="contacts__mail">
-        <span class="contacts__mail-text">e-mail:</span>
-        <a href="#">info@mimimishkashop.ru</a>
+      <div class="contacts__left">
+        <h2>Контакты</h2>
+        <div class="contacts__mail">
+          <span class="contacts__mail-text">e-mail:</span>
+          <a href="#">info@mimimishkashop.ru</a>
+        </div>
+        <div class="contacts__address">
+          <span class="contacts__address-text">адрес:</span>
+          <a href="#">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
+        </div>
       </div>
-      <div class="contacts__address">
-        <span class="contacts__address-text">адрес:</span>
-        <a href="#">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
-      </div>
-      <map class="contacts__map"></map>
+      <map class="contacts__map">
+        <script type="text/javascript" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=leAE7_RHECE48CjgyZOWeDiQG8AG5OqF&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+      </map>
       <a href="#" class="contacts__write">Напишите нам</a>
     </section>
 
   <footer class="page-footer">
-    <ul class="social">
-      <li><img src="http://placehold.it/150x100" class="social__icon social__icon--inst" alt=""></li>
-      <li><img src="http://placehold.it/150x100" class="social__icon social__icon--fb" alt=""></li>
-      <li><img src="http://placehold.it/150x100" class="social__icon social__icon--tw" alt=""></li>
-    </ul>
-    <div class="page-footer__develop">
-      <span>Разработано</span>
-      <a href="#"><img src="http://placehold.it/150x100" class="page-footer__develop--icon" alt=""></a>
+    <div class="page-footer__container">
+      <div class="page-footer__logo">
+        <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
+      </div>
+      <ul class="social">
+        <li><img src="img/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>
+        <li><img src="img/icon-fb.svg" class="social__icon social__icon--fb" alt=""></li>
+        <li><img src="img/icon-twitter.svg" class="social__icon social__icon--tw" alt=""></li>
+      </ul>
+      <div class="page-footer__develop">
+        <span>Разработано</span>
+        <a href="#"><img src="img/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
+      </div>
     </div>
   </footer>
 
-  <section class="modal">
-    <h3 class="modal__title">Добавить в корзину</h3>
-    <span class="modal__subtitle">Выберите размер:</span>
-    <form class="modal__list">
-      <label><input type="radio">S</label><br>
-      <label><input type="radio">M</label>
-      <label><input type="radio">L</label>
-      <button href="#" class="modal__button">Добавить</button>
-    </form>
-  </section>
+    <section class="modal element-invisible">
+      <h3 class="modal__title">Добавить в корзину</h3>
+      <span class="modal__subtitle">Выберите размер:</span>
+      <form class="modal__list">
+        <label><input type="radio">S</label>
+        <label><input type="radio">M</label>
+        <label><input type="radio">L</label>
+        <button href="#" class="modal__button">Добавить</button>
+      </form>
+    </section>
+  <div class="modal-shadow element-invisible"></div>
 
+  <script src="js/script.js"></script>
   </body>
 </html>

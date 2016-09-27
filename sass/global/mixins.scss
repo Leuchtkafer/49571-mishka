@@ -1,16 +1,39 @@
 @mixin black-white-btn {
-  margin: 38px 30px;
   padding: 15px 50px;
   font-size: 18px;
   font-family: $font-open-sans-bold;
   line-height: 16px;
-  color: $font-color-black;
+  background-color: #ffffff;
+  color: $font-color-grey;
   text-transform: uppercase;
+  border: 2px solid $font-color-grey;
+  text-decoration: none;
 }
 
 @mixin title-h2 {
-  font-size: 18px;
-  line-height: 30px;
   font-family: $font-open-sans-bold;
   color: $font-color-black;
 }
+
+@mixin mobile-widths {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 9.38%;
+}
+
+@mixin tablet-widths {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 6.51%;
+  box-sizing: border-box;
+}
+
+@mixin desktop-widths {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 4.35%;
+}
+

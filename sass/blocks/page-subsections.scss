@@ -1,23 +1,54 @@
 .page-subsections {
+  display: flex;
+  flex-wrap: wrap;
   font-family: $font-open-sans-bold;
-  font-size: 19px;
-  line-height: 24px;
-
-  &__interior {
-    background: $turquoise;
-
-    a {
-      color: #ffffff;
-    }
-  }
+  font-size: 0;
 }
-
+.page-subsections__interior {
+  background: $turquoise;
+}
+.page-subsections h2 {
+  width: 100%;
+  height: 100%;
+}
+.page-subsections a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0 30px 35px;
+  color: #ffffff;
+  text-decoration: none;
+  box-sizing: border-box;
+}
 .page-subsections__toys {
   background: $dark-turquoise;
+}
+.page-subsections__interior, .page-subsections__toys {
+  font-size: 14px;
+  line-height: 30px;
+}
 
-  a {
-    color: #ffffff;
+@media (min-width: 1151px) {
+  .page-subsections {
+    @include desktop-widths;
+    height: 119px;
   }
-
+  .page-subsections__interior, .page-subsections__toys {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .page-subsections {
+    @include tablet-widths;
+    height: 115px;
+  }
+  .page-subsections__interior, .page-subsections__toys {
+    width: 50%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .page-subsections__interior, .page-subsections__toys {
+    width: 100%;
+  }
 }
 
