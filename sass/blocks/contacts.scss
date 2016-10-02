@@ -34,6 +34,7 @@
     padding-left: 175px;
     flex-grow: 1;
     padding-top: 50px;
+    background: url(/img/icon-flag.svg) no-repeat 75px 49px;
   }
   .contacts__left h2 {
     font-size: 53px;
@@ -62,6 +63,8 @@
   .contacts {
     @include tablet-widths;
     height: 937px;
+    background: url(/img/icon-flag.svg) no-repeat;
+    background-position: top 55px right 68px;
   }
   .contacts h2 {
     font-size: 43px;

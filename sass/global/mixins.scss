@@ -17,9 +17,8 @@
 
 @mixin mobile-widths {
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
-  padding: 0 9.38%;
+  padding: 0 20px;
 }
 
 @mixin tablet-widths {
@@ -36,4 +35,14 @@
   margin: 0 auto;
   padding: 0 4.35%;
 }
+
+@mixin header-back {
+  background-color: #f9f9f9;
+  background-size: cover;
+  background-position: 50% 7%;
+  background-repeat: no-repeat;
+}
+
+
+
 

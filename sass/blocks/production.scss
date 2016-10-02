@@ -1,5 +1,18 @@
 .production {
+  position: relative;
   display: flex;
+}
+.production__video {
+  position: relative;
+}
+.production__video::before {
+  position: absolute;
+  content: "";
+  background: url(/img/icon-play.svg) no-repeat;
+  width: 101px;
+  height: 77px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
 }
 .production__title {
   display: flex;
@@ -7,10 +20,6 @@
 }
 .production__detail {
   border: 1px solid #ececec;
-}
-.production__video {
-  background: url(/img/video-mobile@1x.jpg) no-repeat;
-  background-size: 100% 100%;
 }
 .production__text {
   font-family: $font-open-sans;
@@ -60,7 +69,6 @@
     flex-wrap: wrap;
     height: 750px;
     width: 668px;
-    margin: 0 auto;
   }
   .production__video {
     width: 100%;

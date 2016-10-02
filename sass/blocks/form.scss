@@ -9,8 +9,10 @@
   margin-bottom: 25px;
   font-family: $font-open-sans-bold;
   outline: none;
+  line-height: 44px;
 }
 .form__color label {
+  vertical-align: top;
   display: inline-flex;
 }
 .form [type="checkbox"], .form [type="radio"] {
@@ -44,20 +46,25 @@ label {
   border: 2px solid $font-color-grey;
 }
 
-.form__type input:checked label:before {
+.form__type input[type=radio]:checked + label:before {
+  display: block;
   content: "\2022";
   color: #62d1ba;
-  font-size: 85px;
+  font-size: 82px;
   text-align: center;
-  line-height: 43px;
-  display: block;
+  line-height: 42px;
 }
-
 .form input[placeholder], .form__add textarea  {
   font-family: $font-open-sans;
   padding: 15px;
   font-size: 19px;
   line-height: 18px;
+}
+.form__color input[type=checkbox]:checked + label:before {
+  background: url(/img/icon-tick.svg) no-repeat 50%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
 }
 .form__data label {
   display: flex;
@@ -70,9 +77,13 @@ label {
   border: none;
   border-bottom: 2px solid;
 }
-.form__contact-tel input, .form__contact-mail input {
-  background-color: $bg-grey;
+.form__contact-tel input {
+  background: url(/img/icon-phone.svg) no-repeat $bg-grey right;
 }
+.form__contact-mail input {
+  background: url(/img/icon-mail.svg) no-repeat $bg-grey right;
+}
+
 .form__data-required {
     color: $font-color-grey;
 }
@@ -225,6 +236,10 @@ label {
 }
 
 @media (min-width: 320px) and (max-width: 767px)  {
+  .form__text, .form__type, .form__color, .form__data, .form__contact-tel, .form__contact-mail, .form__add {
+    display: inherit;
+    background-color: #ffffff;
+  }
   .form__text {
     max-width: 260px;
     margin: 30px auto 30px;
@@ -233,6 +248,7 @@ label {
   }
   .form h2 {
     width: 162px;
+    margin-bottom: 20px;
     font-size: 17px;
     vertical-align: top;
   }
@@ -245,13 +261,24 @@ label {
     padding-top: 25px;
     height: 178px;
   }
+  .form__type span {
+    width: 200px;
+    line-height: 20px;
+  }
   .form__color {
     @include mobile-widths;
     padding-top: 25px;
   }
+  .form__color label:before {
+    background-color: #ffffff;
+  }
   .form__data {
     @include mobile-widths;
     padding-top: 25px;
+  }
+  .form__data label {
+    flex-wrap: wrap;
+    height: auto;
   }
   .form__contact-tel, .form__contact-mail {
     @include  mobile-widths;
@@ -259,6 +286,7 @@ label {
   }
   .form__add {
     @include mobile-widths;
+    display: flex;
     flex-wrap: wrap;
     padding-top: 25px;
   }
@@ -270,27 +298,35 @@ label {
   }
   .form input, label {
     width: 100%;
-    height: 40px;
-  }
-  .form__color label {
-    width: 49%;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 17px;
+    line-height: 18px;
+    background-color: #ffffff;
   }
   .form__add input, label {
     height: auto;
+    line-height: 47px;
+  }
+  .form__add h2 {
+    order: 1;
+  }
+  .form__add .form__detail {
+    order: 2;
   }
   .form__send {
     width: 100%;
     margin-top: 16px;
     margin-bottom: 70px;
-    order: 2;
+    padding: 15px 20px;
+    order: 3;
   }
   .form__data-required {
     justify-content: flex-end;
     width: 100%;
     display: inline-flex;
-    font-size: 17px;
-    line-height: 30px;
-    order: 3;
+    font-size: 14px;
+    line-height: 5px;
   }
 }
 

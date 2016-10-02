@@ -1,15 +1,42 @@
 .page-header {
   width: 100%;
   font-family: $font-open-sans;
-  background: url(/img/hero-mobile@1x.jpg) no-repeat $bg-grey center bottom;
-  border-bottom: 1px solid #e7e7e7;
+  background: url(/img/hero-desktop@1x.jpg);
+  @include header-back;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url(/img/hero-desktop@2x.jpg);
+    @include header-back;
+  }
+}
+.page-header .page-header--sub {
+  background: url(/img/bg-zigzag-fill.svg) #f1f1f1 repeat-x bottom;
+  border: none;
+}
+.page-header__list--active {
+  width: 148px;
+  background-image: url(/img/logo-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.page-header__list--cart {
+  flex-grow: 0.17;
+  position: relative;
+}
+.page-header__list--cart::before {
+  position: absolute;
+  top: 39%;
+  width: 20px;
+  height: 19px;
+  content: "";
+  display: inline-flex;
+  background-image: url(/img/icon-cart.svg);
 }
 .page-header h1 {
   font-family: $font-open-sans-bold;
   text-align: center;
 }
 .page-header__container {
-  width: 100%;
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
@@ -26,17 +53,40 @@
 }
 .page-header__list li a {
   display: inline-flex;
+  width: 100%;
   text-decoration: none;
   font-family: $font-open-sans-bold;
   color: $font-color-black;
   font-size: 17px;
   line-height: 24px;
 }
-
+.page-header__sublist {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+.page-header__sublist li:nth-child(1){
+  flex-grow: 2;
+}
+.page-header__sublist li:nth-child(2){
+  flex-grow: 12;
+}
+.page-header__sublist a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+  font-family: $font-open-sans-bold;
+}
+.page-header__toggle {
+  display: none;
+}
 
 @media (min-width: 1151px) {
   .page-header {
     height: 716px;
+  }
+  .page-header--sub {
+    height: 360px;
   }
   .page-header__nav {
     @include desktop-widths;
@@ -45,15 +95,20 @@
   .page-header__list--find {
     display: none;
   }
+  .page-header__sublist {
+    @include desktop-widths;
+    margin-top: 24px;
+  }
   .page-header h1 {
     width: 700px;
-    margin: 115px auto 0;
+    margin: 100px auto 0;
     font-size: 53px;
     line-height: 57px;
   }
   .page-header__list li a {
     height: 100%;
     line-height: 90px;
+    justify-content: flex-end;
   }
   .page-header__list li:nth-child(4) {
     visibility: hidden;
@@ -62,7 +117,15 @@
 
 @media (min-width: 768px) and (max-width: 1150px) {
   .page-header {
-    height: 627px;
+    height: 715px;
+  }
+  .page-header__sublist {
+    @include tablet-widths;
+    margin-top: 24px;
+  }
+  .page-header__list--active {
+    width: 148px;
+    background-image: url(/img/logo-tablet.svg);
   }
   .page-header__nav {
     @include tablet-widths;
@@ -73,51 +136,69 @@
   }
   .page-header h1 {
     width: 700px;
-    margin: 115px auto 0;
+    margin: 100px auto 0;
     font-size: 53px;
     line-height: 57px;
   }
   .page-header__list li a {
     height: 100%;
     line-height: 90px;
+    justify-content: flex-end;
   }
   .page-header__list li:nth-child(1), li:nth-child(2), li:nth-child(4) {
     display: none;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  .page-header {
+    height: 360px;
+    background-image: url(/img/hero-mobile@1x.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
 
-  .page-header__logo {
-    text-align: center;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(/img/hero-mobile@2x.jpg);
+    }
+  }
+  .page-header__sublist {
+    display: none;
+  }
+  .page-header__list--active {
+    width: 100%;
+    background-image: url(/img/logo-mobile.svg);
+  }
+  .page-header__list--cart::before {
+    left: 10%;
   }
   .page-header__nav {
-    @include mobile-widths;
     width: 100%;
-    height: 397px;
+    height: auto;
     text-align: center;
     line-height: 80px;
   }
   h1 {
     width: 260px;
+    height: 255px;
     margin: 0 auto;
-    padding-top: 70px;
     font-size: 27px;
-    line-height: 30px;
+    background: none;
   }
   .page-header__list {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
   }
   .page-header__list li a {
-    display: block;
-    padding-left: 40px;
+    display: flex;
+    height: 80px;
+    padding-left: 75px;
     font-size: 17px;
-    line-height: 24px;
+    line-height: 80px;
     color: #000000;
-    text-transform: uppercase;
     text-decoration: none;
     border-bottom: 1px solid #ececec;
-    text-align: left;
   }
   .page-header__list li:nth-child(1) {
     order: 2;
@@ -135,30 +216,6 @@
     order: 5;
   }
 
-  .page-header--opened .page-header__toggle {
-    top: 0;
-    right: auto;
-    left: 0;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 24px;
-      left: 18px;
-      width: 36px;
-      height: 2px;
-      background-color: #ffffff;
-    }
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
-
   .page-header__toggle {
     position: absolute;
     top: 0;
@@ -171,9 +228,12 @@
     background-color: #ffffff;
     cursor: pointer;
     border: none;
+    outline: none;
   }
   .page-header--closed .page-header__list--active {
     display: block;
+    padding: 0;
+    justify-content: center;
   }
   .page-header--closed .page-header__list {
     display: none;
@@ -182,19 +242,17 @@
   .page-header--closed .page-header__toggle::before {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 17px;
-    width: 36px;
-    height: 2px;
-    background-color: #221f1f;
-    box-shadow: 0 8px 0 0 #221f1f,
-    0 16px 0 0 #221f1f;
+    width: 100%;
+    height: 100%;
+    background: url(/img/icon-menu-open.svg) no-repeat;
   }
 
-  .page-header--closed .page-header__toggle:active::before {
-    background-color: #221f1f;
-    box-shadow: 0 8px 0 0 #221f1f,
-    0 16px 0 0 #221f1f;
+  .page-header--opened .page-header__toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(/img/icon-menu-close.svg) no-repeat;
   }
 }
 

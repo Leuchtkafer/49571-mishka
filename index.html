@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -15,21 +15,26 @@
         <ul class="page-header__list">
           <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="form.html">Вязание на заказ</a></li>
-          <li class="page-header__list--active"><a href="#"><img src="img/logo-mobile.svg" alt=""></a></li>
-          <li><a href="#">Поиск по сайту</a></li>
-          <li><a href="#">Корзина: пока пуста</a></li>
+          <li class="page-header__list--active"><a href="#"></a></li>
+          <li class="page-header__list--find"><a href="#">Поиск по сайту</a></li>
+          <li class="page-header__list--cart"><a href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
     </div>
+    <ul class="page-header__sublist">
+      <li><a href="#">Новые поступления</a></li>
+      <li><a href="#">Распродажа</a></li>
+      <li>Бесплатная доставка по России</li>
+    </ul>
     <h1>Милые штуки ручной работы для дома</h1>
   </header>
 
     <section class="page-subsections">
       <div class="page-subsections__interior">
-        <h2><a href="#">Предметы интерьера</a></h2>
+        <a href="#"><h2>Предметы интерьера</h2></a>
       </div>
       <div class="page-subsections__toys">
-        <h2><a href="#">Детские игрушки</a></h2>
+        <a href="#"><h2>Детские игрушки</h2></a>
       </div>
     </section>
 
@@ -49,7 +54,11 @@
             <tr><td>Диаметр:</td><td>25 см</td></tr>
             <tr><td>Высота:</td><td>15 см</td></tr>
           </table>
-          <img src="img/triple-set-mobile@1x.jpg" class="product-week_image" alt="">
+          <picture>
+            <source media="(min-width: 1151px)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-mobile@2x.jpg, img/triple-set-mobile@2x.jpg">
+            <img src="img/triple-set-desktop@2x.jpg" srcset=""  alt="" class="product-week_image">
+          </picture>
           <span class="product-week__price">
             Цена: 990 руб.
           </span>
@@ -63,7 +72,6 @@
         <img src="img/icon-feature-1.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Экологически чистые материалы</h3>
       </div>
-
       <div class="page-advantages__plus">
         <img src="img/icon-feature-2.svg" class="page-advantages__icon" alt="">
         <h3 class="page-advantages__text">Скандинавский стиль по российской цене</h3>
@@ -98,11 +106,11 @@
         фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
         <span class="page-feedback__author-name">Анастасия Красильникова</span>
         <span class="page-feedback__author-nick">@misssssiskras</span>
+        <div class="feedback__navs">
+          <a class="feedback__nav feedback__nav--left"><img src="img/icon-left-arrow.svg" alt=""></a>
+          <a class="feedback__nav feedback__nav--right"><img src="img/icon-right-arrow.svg" alt=""></a>
+        </div>
       </article>
-      <div class="feedback__navs">
-        <a class="feedback__nav feedback__nav--left"></a>
-        <a class="feedback__nav feedback__nav--right"></a>
-      </div>
       <a href="#" class="page-feedback__write">Написать</a>
     </article>
 
@@ -127,7 +135,7 @@
   <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" alt=""></a>
+        <a href="index.html"></a>
       </div>
       <ul class="social">
         <li><img src="img/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>

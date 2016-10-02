@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -15,12 +15,17 @@
         <ul class="page-header__list">
           <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="form.html">Вязание на заказ</a></li>
-          <li class="page-header__list--active"><a href="#"><img src="img/logo-mobile.svg" alt=""></a></li>
-          <li><a href="#">Поиск по сайту</a></li>
-          <li><a href="#">Корзина: пока пуста</a></li>
+          <li class="page-header__list--active"><a href="index.html"></a></li>
+          <li class="page-header__list--find"><a href="#">Поиск по сайту</a></li>
+          <li class="page-header__list--cart"><a href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
     </div>
+    <ul class="page-header__sublist">
+      <li><a href="#">Новые поступления</a></li>
+      <li><a href="#">Распродажа</a></li>
+      <li>Бесплатная доставка по России</li>
+    </ul>
       <h1>Каталог товаров</h1>
     </header>
 
@@ -28,7 +33,11 @@
     <div class="product__wrapper">
       <article class="product">
         <a href="#">
-          <img src="http://placehold.it/150x100" class="product__image" alt="">
+          <picture>
+            <source media="(min-width: 1151px)" srcset="img/photo-1-desktop@1x.jpg, img/photo-1-desktop@2x.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-1-mobile@1x.jpg, img/photo-1-mobile@2x.jpg">
+            <img src="img/photo-1-mobile@2x.jpg" srcset=""  alt="" class="product__image">
+          </picture>
         </a>
         <div class="product--row">
           <h2 class="product__title">Зайчик-попрыгайчик</h2>
@@ -40,7 +49,11 @@
 
       <article class="product">
         <a href="#">
-          <img src="http://placehold.it/150x100" class="product__image" alt="">
+          <picture>
+            <source media="(min-width: 1151px)" srcset="img/photo-2-desktop@1x.jpg, img/photo-2-desktop@2x.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-2-mobile@1x.jpg, img/photo-2-mobile@2x.jpg">
+            <img src="img/photo-2-mobile@2x.jpg" srcset=""  alt="" class="product__image">
+          </picture>
         </a>
         <div class="product--row">
           <h2 class="product__title">Корзинка для белья</h2>
@@ -52,7 +65,11 @@
 
       <article class="product">
         <a href="#">
-          <img src="http://placehold.it/150x100" class="product__image" alt="">
+          <picture>
+            <source media="(min-width: 1151px)" srcset="img/photo-3-desktop@1x.jpg, img/photo-3-desktop@2x.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg">
+            <img src="img/photo-3-mobile@2x.jpg" srcset=""  alt="" class="product__image">
+          </picture>
         </a>
         <div class="product--row">
           <h2 class="product__title">Большая корзинка для игрушек</h2>
@@ -65,7 +82,11 @@
 
     <section class="production">
       <div class="production__video">
-        <video></video>
+        <picture>
+          <source media="(min-width: 1151px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg">
+          <img src="img/video-mobile@2x.jpg" srcset=""  alt="" class="product__image">
+        </picture>
       </div>
       <div class="production__detail">
         <img src="img/icon-video.svg" class="product__icon" alt="">

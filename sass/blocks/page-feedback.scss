@@ -4,17 +4,34 @@
   font-family: $font-open-sans;
   color: $font-color-grey;
   background: url(/img/review@1x.jpg) no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url(/img/review@2x.jpg) no-repeat;
+  }
 }
 .page-feedback h2 {
   @include title-h2;
 }
 .page-feedback__author-name {
-  display: block;
+  display: flex;
   color: $font-color-black;
   font-family: $font-open-sans-bold;
 }
+.page-feedback__author-nick {
+  display: inline-flex;
+}
 .page-feedback__write {
   @include black-white-btn;
+}
+.feedback__navs {
+  display: inline-flex;
+  width: 84%;
+  order: 4;
+  justify-content: flex-end;
+}
+.feedback__nav--left,.feedback__nav--right {
+  display: inline-flex;
+  margin-left: 37px;
 }
 
 @media (min-width: 1151px) {
@@ -34,7 +51,6 @@
     order: 1;
   }
   .page-feedback__text {
-    padding-right: 188px;
     font-size: 17px;
     line-height: 30px;
     order: 3;
@@ -73,6 +89,9 @@
   .page-feedback__author-name {
     padding-top: 50px;
   }
+  .feedback__navs {
+    width: 77%;
+  }
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .page-feedback {
@@ -101,5 +120,22 @@
     width: 100%;
     margin-top: 40px;
     text-align: center;
+  }
+  .feedback__navs {
+    width: 100%;
+    height: 46px;
+    margin-top: 30px;
+    justify-content: space-around;
+  }
+  .feedback__nav--left,.feedback__nav--right {
+    width: 50%;
+    margin-left: 0;
+    padding: 5px;
+    border: 1px solid #ececec;
+  }
+  .feedback__nav--left img,.feedback__nav--right img {
+    width: 100%;
+    height: 27px;
+    padding-top: 3px;
   }
 }
