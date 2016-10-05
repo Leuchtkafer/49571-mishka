@@ -23,6 +23,12 @@
 .page-feedback__write {
   @include black-white-btn;
 }
+.page-feedback__write:hover {
+  @include black-white-btn-hover;
+}
+.page-feedback__write:active {
+  @include black-white-btn-down;
+}
 .feedback__navs {
   display: inline-flex;
   width: 84%;

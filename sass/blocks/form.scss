@@ -4,6 +4,12 @@
 .form__type{
   width: 100%;
 }
+.form__type label:hover:before {
+   border-color: #62d1ba;
+}
+.form__type label:active:before {
+  border-color: #cbcbcb;
+}
 .form input, label {
   display: flex;
   margin-bottom: 25px;
@@ -45,7 +51,12 @@ label {
   background-color: #f1f1f1;
   border: 2px solid $font-color-grey;
 }
-
+.form__color label:hover:before {
+  border-color: #62d1ba;
+}
+.form__color label:active:before {
+  border-color: #cbcbcb;
+}
 .form__type input[type=radio]:checked + label:before {
   display: block;
   content: "\2022";
@@ -75,7 +86,10 @@ label {
   width: 100%;
   margin-left: 25px;
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #000000;
+}
+.form__data input:focus, .form__contact-tel input:focus, .form__contact-mail input:focus {
+  border-color: #62d1ba;
 }
 .form__contact-tel input {
   background: url(/img/icon-phone.svg) no-repeat $bg-grey right;
@@ -83,13 +97,18 @@ label {
 .form__contact-mail input {
   background: url(/img/icon-mail.svg) no-repeat $bg-grey right;
 }
-
 .form__data-required {
     color: $font-color-grey;
 }
 .form__send {
     @include black-white-btn;
     text-transform: uppercase;
+}
+.form__send:hover {
+  @include black-white-btn-hover;
+}
+.form__send:active {
+  @include black-white-btn-down ;
 }
 .form__text {
   color: $font-color-grey;

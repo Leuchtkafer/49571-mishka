@@ -8,8 +8,18 @@
   text-transform: uppercase;
   border: 2px solid $font-color-grey;
   text-decoration: none;
+  cursor: pointer;
+  outline: none;
 }
 
+@mixin black-white-btn-hover {
+  background-color: $font-color-grey;
+  color: #ffffff;
+}
+@mixin black-white-btn-down {
+  background-color: $font-color-grey;
+  color: #8d8d8d;
+}
 @mixin title-h2 {
   font-family: $font-open-sans-bold;
   color: $font-color-black;

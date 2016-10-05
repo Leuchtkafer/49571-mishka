@@ -13,6 +13,12 @@
   background: url(/img/bg-zigzag-fill.svg) #f1f1f1 repeat-x bottom;
   border: none;
 }
+.page-header a:hover {
+  color: $font-hover-text;
+}
+.page-header a:active {
+  color: $font-down-text;
+}
 .page-header__list--active {
   width: 148px;
   background-image: url(/img/logo-desktop.svg);

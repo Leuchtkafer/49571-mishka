@@ -11,10 +11,23 @@
   height: 17px;
   text-align: center;
 }
+.contacts__write:hover {
+  @include black-white-btn-hover;
+}
+.contacts__write:active {
+  @include black-white-btn-down;
+}
 .contacts__mail a {
   color: $font-color-grey;
   border-bottom: 1px solid #56c3b2;
   text-decoration: none;
+}
+.contacts__mail a:hover {
+  color: #46c1ae;
+}
+.contacts__mail a:active {
+  color: #dff2ef;
+  border-color: #dff2ef;
 }
 .contacts__address a {
   display: inline-block;
