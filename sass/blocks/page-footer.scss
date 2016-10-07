@@ -10,6 +10,13 @@
   text-align: right;
   font-family: $font-open-sans-bold;
 }
+.page-footer__develop--link {
+  color: $font-color-black;
+  text-decoration: none;
+}
+.page-footer__develop--link:active {
+  color: #bfbfbf;
+}
 .page-footer__logo {
   width: 33%;
   text-align: left;

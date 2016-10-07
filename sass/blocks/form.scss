@@ -88,14 +88,17 @@ label {
   border: none;
   border-bottom: 2px solid #000000;
 }
-.form__data input:focus, .form__contact-tel input:focus, .form__contact-mail input:focus {
+.form__data input:hover, .form__contact-tel input:hover, .form__contact-mail input:hover, .form__add textarea:hover {
+  border-color: #62d1ba;
+}
+.form__data input:focus, .form__contact-tel input:focus, .form__contact-mail input:focus, .form__add textarea:focus {
   border-color: #62d1ba;
 }
 .form__contact-tel input {
-  background: url(/img/icon-phone.svg) no-repeat $bg-grey right;
+  background: url(/img/icons/icon-phone.svg) no-repeat $bg-grey right;
 }
 .form__contact-mail input {
-  background: url(/img/icon-mail.svg) no-repeat $bg-grey right;
+  background: url(/img/icons/icon-mail.svg) no-repeat $bg-grey right;
 }
 .form__data-required {
     color: $font-color-grey;
@@ -167,6 +170,7 @@ label {
     height: 138px;
     margin-bottom: 80px;
     border-color: #000000;
+    outline: none;
   }
   .form input, label {
     font-size: 19px;

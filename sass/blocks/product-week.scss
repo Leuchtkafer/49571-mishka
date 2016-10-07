@@ -21,6 +21,12 @@
 .product-week__order {
   @include black-white-btn;
 }
+.product-week__order:hover {
+  @include black-white-btn-hover;
+}
+.product-week__order:active {
+  @include black-white-btn-down;
+}
 
 @media (min-width: 1151px) {
     .product-week {

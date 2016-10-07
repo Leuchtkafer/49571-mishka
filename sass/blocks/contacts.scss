@@ -37,6 +37,9 @@
   line-height: 30px;
   vertical-align: text-top;
 }
+.contacts__map {
+  background: url(/img/map-desktop@1x.jpg) no-repeat;
+}
 
 @media (min-width: 1151px) {
   .contacts {
@@ -102,6 +105,9 @@
     width: 149px;
     font-size: 17px;
   }
+  .contacts__map {
+    background: url(/img/map-tablet@1x.jpg) no-repeat;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -127,6 +133,7 @@
   }
   .contacts map {
     width: 100%;
+    background: url(/img/map-mobile@1x.jpg) no-repeat;
   }
 }
 

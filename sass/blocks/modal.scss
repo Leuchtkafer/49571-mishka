@@ -51,6 +51,12 @@
     border: 2px solid #ececec;
     padding: 15px 49px;
   }
+  label:hover {
+    border-color: #c7c7c7;
+  }
+  label:active {
+    border-color: #62d1ba;
+  }
   input[type="radio"] {
     display: none;
   }
