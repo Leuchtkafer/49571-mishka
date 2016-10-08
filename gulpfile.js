@@ -88,7 +88,7 @@ gulp.task("build", function(fn) {
 
 gulp.task("serve", function() {
   server.init({
-    server: "build",
+    server: ".build",
     notify: false,
     open: true,
     ui: false
