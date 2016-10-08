@@ -6,9 +6,11 @@
   display: flex;
 }
 .page-footer__develop {
-  width: 33%;
+  width: 39%;
   text-align: right;
   font-family: $font-open-sans-bold;
+  font-size: 18px;
+  padding-top: 3px;
 }
 .page-footer__develop--link {
   color: $font-color-black;
@@ -18,13 +20,20 @@
   color: #bfbfbf;
 }
 .page-footer__logo {
-  width: 33%;
+  width: 43%;
   text-align: left;
 }
 .page-footer__develop--icon {
   display: inline-flex;
   margin-left: 20px;
   vertical-align: middle;
+}
+#icon-insta, #icon-fb, #icon-twitter:hover {
+  fill: #46c1ae;
+}
+
+#icon-insta, #icon-fb, #icon-twitter:active {
+  fill: #bde3dd;
 }
 
 @media (min-width: 1151px) {

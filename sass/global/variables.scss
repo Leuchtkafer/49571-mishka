@@ -14,4 +14,21 @@ $font-open-sans-bold: 'Open Sans Bold', sans-serif;
   padding: 0;
 }
 
+svg {
+  display: none;
+}
+
+.svg-visible {
+  display: block;
+  height: 100%;
+}
+
+.svg-visible:hover {
+  fill: #46c1ae;
+}
+
+.svg-visible:active {
+  fill: #bde3dd;
+}
+
 

@@ -9,11 +9,11 @@
 }
 .modal {
   position: fixed;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   display: flex;
   flex-wrap: wrap;
-  width: 567px;
+  width: 570px;
   height: 339px;
   padding: 0 105px;
   box-sizing: border-box;
@@ -50,6 +50,7 @@
     font-size: 17px;
     border: 2px solid #ececec;
     padding: 15px 49px;
+    box-sizing: border-box;
   }
   label:hover {
     border-color: #c7c7c7;
@@ -75,6 +76,63 @@
 }
 .element-invisible {
   display: none;
+}
+
+@media (min-width: 1151px) {
+  .modal {
+    height: 339px;
+    padding: 0 105px;
+    box-sizing: border-box;
+  }
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+  }
+  .modal__subtitle {
+    padding-bottom: 25px;
+  }
+  .modal__list {
+    width: 100%;
+  }
+  .modal__list label {
+    display: inline-flex;
+    align-items: center;
+    width: 115px;
+    height: 50px;
+    margin: 0;
+    padding: 15px 44px;
+    line-height: 50px;
+  }
+  .modal__button {
+    width: 80%;
+    margin: 25px auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+  .modal {
+    height: 339px;
+    padding: 0 105px;
+    box-sizing: border-box;
+  }
+  .modal__title {
+    padding: 35px 60px 30px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .modal__subtitle {
+    padding-bottom: 25px;
+  }
+  .modal__list label {
+    width: 110px;
+    height: 50px;
+    padding: 15px 44px;
+    line-height: 50px;
+  }
+  .modal__button {
+    width: 80%;
+    margin: 25px auto;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

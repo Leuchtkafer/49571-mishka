@@ -7,6 +7,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background: url(/img/review@2x.jpg) no-repeat;
+    background-size: 345px 100%;
   }
 }
 .page-feedback h2 {
@@ -43,11 +44,11 @@
 @media (min-width: 1151px) {
   .page-feedback {
     @include desktop-widths;
-    margin-bottom: 80px;
+    margin-bottom: 68px;
     padding-bottom: 100px;
     padding-left: 175px;
-    background-position-x: 4.35%;
     box-sizing: border-box;
+    padding-right: 0;
   }
   .page-feedback h2 {
     flex-grow: 1;
@@ -63,21 +64,24 @@
   }
   .page-feedback__write {
     height: 17px;
-    margin-top: 70px;
+    margin-top: 79px;
     order: 2;
   }
   .page-feedback__author-name {
-    padding-top: 50px;
+    margin-bottom: -6px;
+    padding-top: 35px;
+    padding-left: 3px;
   }
 }
 @media (min-width: 768px) and (max-width: 1150px) {
   .page-feedback {
     @include tablet-widths;
+    margin-bottom: 61px;
     padding-bottom: 55px;
   }
   .page-feedback h2 {
     flex-grow: 1;
-    padding: 70px 0 50px;
+    padding: 75px 0 50px;
     font-size: 43px;
     line-height: 50px;
     order: 1;
@@ -89,8 +93,10 @@
   }
   .page-feedback__write {
     height: 17px;
-    margin-top: 70px;
+    margin-top: 78px;
     order: 2;
+    width: 95px;
+    padding: 15px 40px;
   }
   .page-feedback__author-name {
     padding-top: 50px;

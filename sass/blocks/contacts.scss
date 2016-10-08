@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   font-family: $font-open-sans;
   color: $font-color-grey;
+  background: url(/img/bg-zigzag-line.svg) repeat-x top;
 }
 .contacts__write {
   @include black-white-btn;
@@ -42,15 +43,17 @@
 }
 
 @media (min-width: 1151px) {
-  .contacts {
+  .contacts__container {
     @include desktop-widths;
     padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .contacts__left {
     padding-left: 175px;
     flex-grow: 1;
-    padding-top: 50px;
-    background: url(/img/icon-flag.svg) no-repeat 75px 49px;
+    background: url(/img/icon-flag.svg) no-repeat 64px 151px;
+    padding-top: 152px;
   }
   .contacts__left h2 {
     font-size: 53px;
@@ -66,12 +69,15 @@
     padding-right: 25px;
   }
   .contacts__write {
-    margin-top: -53px;
-    width: 157px;
+    margin-top: -55px;
+    width: 168px;
+    padding: 15px 29px;
     margin-left: 176px;
   }
   .contacts__map {
+    height: 460px;
     width: 525px;
+    margin-top: 89px;
   }
 }
 
@@ -79,13 +85,18 @@
   .contacts {
     @include tablet-widths;
     height: 937px;
+    padding: 0 6%;
+    position: relative;
+  }
+  .contacts__left {
+    padding-bottom: 55px;
     background: url(/img/icon-flag.svg) no-repeat;
     background-position: top 55px right 68px;
   }
   .contacts h2 {
     font-size: 43px;
     padding-top: 70px;
-    padding-bottom: 55px;
+    padding-bottom: 47px;
   }
   .contacts__mail, .contacts__address {
     display: inline-flex;
@@ -99,11 +110,16 @@
   }
   .contacts__map {
     width: 100%;
+    position: absolute;
+    left: 0;
   }
   .contacts__write {
-    margin: 0 auto;
-    width: 149px;
+    width: 153px;
     font-size: 17px;
+    position: absolute;
+    bottom: 53px;
+    left: 34.6%;
+    padding: 15px 37px;
   }
   .contacts__map {
     background: url(/img/map-tablet@1x.jpg) no-repeat;

@@ -1,42 +1,51 @@
 .page-advantages {
   display: flex;
   flex-wrap: wrap;
+  background: url(/img/bg-zigzag-line.svg) repeat-x top;
 }
 .page-advantages__title {
   width: auto;
   font-family: $font-open-sans-bold;
   text-align: left;
 }
+.page-advantages__text {
+  font-family: $font-open-sans-bold;
+}
 
 @media (min-width: 1151px) {
   .page-advantages {
+    padding-top: 84px;
+  }
+  .page-advantages__container {
     @include desktop-widths;
-    width: 700px;
-    padding-bottom: 80px;
+    width: 709px;
+    padding-bottom: 60px;
   }
   .page-advantages__plus {
-    width: 50%;
-    padding: 50px 0 0;
+    width: 48.5%;
+    padding: 38px 1px 21px 4px;
+    display: inline-block;
   }
   .page-advantages__title {
     font-size: 53px;
     line-height: 57px;
+    margin-bottom: 10px;
   }
   .page-advantages__text {
     font-size: 20px;
-    padding-top: 20px;
-    padding-right: 100px;
+    padding-top: 10px;
   }
 }
 @media (min-width: 768px) and (max-width: 1150px) {
-  .page-advantages {
+  .page-advantages__container {
     @include tablet-widths;
-    width: 670px;
-    padding-bottom: 80px;
+    width: 690px;
+    padding: 66px 0 83px;
   }
   .page-advantages__plus {
-    width: 50%;
-    padding: 50px 0 0;
+    width: 48.5%;
+    padding: 33px 1px 0px 4px;
+    display: inline-block;
   }
   .page-advantages__title {
     width: 100%;
@@ -45,8 +54,7 @@
   }
   .page-advantages__text {
     font-size: 20px;
-    padding-top: 20px;
-    padding-right: 100px;
+    padding-top: 30px;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {

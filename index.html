@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Каталог</title>
-    <meta name="viewport" content="width=device-width">
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -12,12 +12,21 @@
     <div class="page-header__container">
       <nav class="page-header__nav page-header--closed page-header__nav--nojs">
         <button class="page-header__toggle" type="button"></button>
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+            <img src="img/icons/logo-mobile.svg" width="150" height="73" alt="">
+          </picture>
+        </a>
         <ul class="page-header__list">
           <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="form.html">Вязание на заказ</a></li>
-          <li class="page-header__list--active"><a href="#"></a></li>
-          <li class="page-header__list--find"><a href="#">Поиск по сайту</a></li>
-          <li class="page-header__list--cart"><a href="#">Корзина: пока пуста</a></li>
+          <li class="page-header__list page-header__list--find">
+            <a href="#"><svg class="svg-visible" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg><span>Поиск по сайту</span></a></li>
+          <li class="page-header__list page-header__list--cart">
+            <a href="#"><svg class="svg-visible icon-cart" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use></svg>Корзина: пока пуста</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -67,34 +76,36 @@
     </article>
 
     <section class="page-advantages">
-      <h2 class="page-advantages__title">Коротко о нас:</h2>
-      <div class="page-advantages__plus">
-        <img src="img/icon-feature-1.svg" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Экологически чистые материалы</h3>
-      </div>
-      <div class="page-advantages__plus">
-        <img src="img/icon-feature-2.svg" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Скандинавский стиль по российской цене</h3>
-      </div>
+      <div class="page-advantages__container">
+        <h2 class="page-advantages__title">Коротко о нас:</h2>
+        <div class="page-advantages__plus">
+          <img src="img/icon-feature-1.svg" class="page-advantages__icon" alt="">
+          <h3 class="page-advantages__text">Экологически <br> чистые материалы</h3>
+        </div>
+        <div class="page-advantages__plus">
+          <img src="img/icon-feature-2.svg" class="page-advantages__icon" alt="">
+          <h3 class="page-advantages__text">Связано вручную с <br> любовью и умилением</h3>
+        </div>
 
-      <div class="page-advantages__plus">
-        <img src="img/icon-feature-3.svg" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Увеличивает лайки на фотографиях</h3>
-      </div>
+        <div class="page-advantages__plus">
+          <img src="img/icon-feature-3.svg" class="page-advantages__icon" alt="">
+          <h3 class="page-advantages__text">Скандинавский стиль <br> по российской цене</h3>
+        </div>
 
-      <div class="page-advantages__plus">
-        <img src="img/icon-feature-4.svg" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Связано вручную с любовью и умилением</h3>
-      </div>
+        <div class="page-advantages__plus">
+          <img src="img/icon-feature-4.svg" class="page-advantages__icon" alt="">
+          <h3 class="page-advantages__text">Поддержка отечественного <br> производителя</h3>
+        </div>
 
-      <div class="page-advantages__plus">
-        <img src="img/icon-feature-5.svg" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Поддержка российского производителя</h3>
-      </div>
+        <div class="page-advantages__plus">
+          <img src="img/icon-feature-5.svg" class="page-advantages__icon" alt="">
+          <h3 class="page-advantages__text">Увеличивает лайки <br> на фотографиях</h3>
+        </div>
 
-      <div class="page-advantages__plus">
-        <img src="img/icon-feature-6.svg" class="page-advantages__icon" alt="">
-        <h3 class="page-advantages__text">Поставляется в подарочной упаковке</h3>
+        <div class="page-advantages__plus">
+          <img src="img/icon-feature-6.svg" class="page-advantages__icon" alt="">
+          <h3 class="page-advantages__text">Поставляется в <br> подарочной упаковке</h3>
+        </div>
       </div>
     </section>
 
@@ -115,35 +126,41 @@
     </article>
 
     <section class="contacts">
-      <div class="contacts__left">
-        <h2>Контакты</h2>
-        <div class="contacts__mail">
-          <span class="contacts__mail-text">e-mail:</span>
-          <a href="#">info@mimimishkashop.ru</a>
+      <div class="contacts__container">
+        <div class="contacts__left">
+          <h2>Контакты</h2>
+          <div class="contacts__mail">
+            <span class="contacts__mail-text">e-mail:</span>
+            <a href="#">info@mimimishkashop.ru</a>
+          </div>
+          <div class="contacts__address">
+            <span class="contacts__address-text">адрес:</span>
+            <a href="#">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
+          </div>
         </div>
-        <div class="contacts__address">
-          <span class="contacts__address-text">адрес:</span>
-          <a href="#">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
-        </div>
+        <map class="contacts__map">
+          <script type="text/javascript" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=leAE7_RHECE48CjgyZOWeDiQG8AG5OqF&amp;width=100%&amp;height=460&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+        </map>
+        <a href="#" class="contacts__write">Напишите нам</a>
       </div>
-      <map class="contacts__map">
-        <script type="text/javascript" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=leAE7_RHECE48CjgyZOWeDiQG8AG5OqF&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
-      </map>
-      <a href="#" class="contacts__write">Напишите нам</a>
     </section>
 
   <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__logo">
-        <a href="index.html"></a>
+        <a href="index.html">
+          <svg class="svg-visible" width="104" height="38"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-footer"></use></svg>
+        </a>
       </div>
       <ul class="social">
-        <li><img src="img/icons/icon-insta.svg" class="social__icon social__icon--inst" alt=""></li>
-        <li><img src="img/icons/icon-fb.svg" class="social__icon social__icon--fb" alt=""></li>
-        <li><img src="img/icons/icon-twitter.svg" class="social__icon social__icon--tw" alt=""></li>
+        <li><svg class="svg-visible icon-insta" width="22" height="23"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use></svg></li>
+        <li><svg class="svg-visible" width="15" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use></svg></li>
+        <li><svg class="svg-visible" width="24" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg></li>
       </ul>
       <div class="page-footer__develop">
-        <a href="#" class="page-footer__develop--link"><span>Разработано</span><img src="img/icons/logo-htmlacademy.svg" class="page-footer__develop--icon" alt=""></a>
+        <a href="#" class="page-footer__develop--link"><span>Разработано</span>
+          <svg class="page-footer__develop--icon svg-visible" width="28" height="36"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
+        </a>
       </div>
     </div>
   </footer>
