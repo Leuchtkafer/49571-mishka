@@ -58,7 +58,7 @@ navToggle.addEventListener('click', function() {
 
 //Модальное окно
 
-          //Открыть модальное окно
+//Открыть модальное окно
 
 function toMakeOrder(){
   var makeOrder = document.querySelectorAll('.make-order');
@@ -75,7 +75,7 @@ function toMakeOrder(){
 }
 toMakeOrder();
 
-          //Закрыть модальное окно
+//Закрыть модальное окно
 
 var modalWindow = document.querySelector('.modal');
 var modalShadow = document.querySelector('.modal-shadow');
