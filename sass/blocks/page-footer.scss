@@ -56,9 +56,10 @@
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .page-footer {
-    height: 156px;
+    height: 159px;
   }
   .page-footer__container {
+    height: 100%;
     flex-wrap: wrap;
     @include mobile-widths;
   }

@@ -129,11 +129,17 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .contacts {
     @include mobile-widths;
-    height: 706px;
+    height: 824px;
+    background-size: contain;
+    position: relative;
+  }
+  .contacts__left {
+    margin-left: 6px;
   }
   .contacts  h2 {
     @include title-h2;
-    margin-bottom: 30px;
+    margin-top: 44px;
+    margin-bottom: 33px;
     font-size: 18px;
   }
   .contacts__mail, .contacts__address {
@@ -143,11 +149,18 @@
   .contacts__mail {
     margin-bottom: 30px;
   }
+  .contacts__mail a, .contacts__mail a {
+    margin-left: 20px;
+  }
   .contacts__write {
-    width: 100%;
     font-size: 18px;
+    position: absolute;
+    bottom: 40px;
+    left: 7%;
   }
   .contacts map {
+    position: absolute;
+    left: 0;
     width: 100%;
     background: url(/img/map-mobile@1x.jpg) no-repeat;
   }

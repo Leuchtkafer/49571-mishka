@@ -40,6 +40,12 @@
   display: inline-flex;
   margin-left: 37px;
 }
+.icon-left-arrow:hover, .icon-right-arrow:hover {
+  fill: #666666;
+}
+.icon-left-arrow:active, .icon-right-arrow:active {
+  fill: #b2b2b2;
+}
 
 @media (min-width: 1151px) {
   .page-feedback {
@@ -108,14 +114,19 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .page-feedback {
     @include mobile-widths;
-    padding-bottom: 55px;
-    background: none;
+    width: auto;
+    padding-bottom: 50px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: none;
+    }
   }
   .page-feedback h2 {
-    padding: 35px 0;
+    padding: 13px 0 21px 7px;
     font-size: 25px;
   }
   .page-feedback__text {
+    padding-left: 10px;
     font-size: 15px;
     line-height: 30px;
   }

@@ -14,16 +14,16 @@
         <button class="page-header__toggle" type="button"></button>
         <a href="index.html" class="page-header__logo">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/icons/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
-            <img src="img/icons/logo-mobile.svg" width="150" height="73" alt="">
+            <source media="(min-width: 1200px)" class="svg-visible" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" class="svg-visible"  srcset="img/icons/logo-tablet.svg">
+            <img src="img/icons/logo-mobile.svg" alt="">
           </picture>
         </a>
         <ul class="page-header__list">
           <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="form.html">Вязание на заказ</a></li>
           <li class="page-header__list page-header__list--find">
-            <a href="#"><svg class="svg-visible" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg><span>Поиск по сайту</span></a></li>
+            <a href="#"><svg class="svg-visible icon-search" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg><span>Поиск по сайту</span></a></li>
           <li class="page-header__list page-header__list--cart">
             <a href="#"><svg class="svg-visible icon-cart" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use></svg>Корзина: пока пуста</a>
           </li>
@@ -118,8 +118,12 @@
         <span class="page-feedback__author-name">Анастасия Красильникова</span>
         <span class="page-feedback__author-nick">@misssssiskras</span>
         <div class="feedback__navs">
-          <a class="feedback__nav feedback__nav--left"><img src="img/icons/icon-left-arrow.svg" alt=""></a>
-          <a class="feedback__nav feedback__nav--right"><img src="img/icons/icon-right-arrow.svg" alt=""></a>
+          <a class="feedback__nav feedback__nav--left">
+            <svg class="icon-left-arrow" width="50" height=25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-left-arrow"></use></svg>
+          </a>
+          <a class="feedback__nav feedback__nav--right">
+            <svg class="icon-right-arrow" width="50" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-right-arrow"></use></svg>
+          </a>
         </div>
       </article>
       <a href="#" class="page-feedback__write">Написать</a>
@@ -153,9 +157,9 @@
         </a>
       </div>
       <ul class="social">
-        <li><svg class="svg-visible icon-insta" width="22" height="23"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use></svg></li>
-        <li><svg class="svg-visible" width="15" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use></svg></li>
-        <li><svg class="svg-visible" width="24" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg></li>
+        <li><a href="#"><svg class="svg-visible icon-insta" width="22" height="23"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use></svg></a></li>
+        <li><a href="#"><svg class="svg-visible icon-fb" width="15" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use></svg></a></li>
+        <li><a href="#"><svg class="svg-visible icon-twitter" width="24" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg></a></li>
       </ul>
       <div class="page-footer__develop">
         <a href="#" class="page-footer__develop--link"><span>Разработано</span>

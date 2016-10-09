@@ -153,12 +153,12 @@
   .product-week {
     @include mobile-widths;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 260px;
   }
   .product-week__title {
     position: relative;
     width: 100%;
-    padding: 55px 0;
+    padding: 27px 0 45px 0;
     text-align: left;
     font-size: 25px;
     line-height: 30px;
@@ -166,20 +166,22 @@
   }
   .product-week__subtitle {
     position: absolute;
-    padding-top: 90px;
-    text-align: left;
+    padding-top: 61px;
   }
   .product-week__description {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 24px;
   }
   .product-week__table-size {
     margin-top: 30px;
   }
+  .product-week__table-size tr {
+    height: 30px;
+  }
   .product-week__table-size td {
     height: 25px;
-    margin-right: 20px;
-    padding-right: 30px;
+    padding-right: 25px;
+    font-size: 15px;
   }
   .product-week_image {
     margin-top: 30px;

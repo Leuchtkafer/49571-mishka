@@ -27,12 +27,19 @@
 .form [type="checkbox"], .form [type="radio"] {
   display: none;
 }
-label {
+.form label {
   cursor: pointer;
   position: relative;
   padding-left: 25px;
   margin-right: 15px;
-  font-size: 13px;
+}
+.icon-phone, .icon-mail {
+  fill: #c1c1c1;
+}
+.icon-phone, .icon-mail {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
 }
 
 .form__type label:before {
@@ -98,10 +105,10 @@ label {
   border-color: #62d1ba;
 }
 .form__contact-tel input {
-  background: url(/img/icons/icon-phone.svg) no-repeat $bg-grey right;
+  background: $bg-grey;
 }
 .form__contact-mail input {
-  background: url(/img/icons/icon-mail.svg) no-repeat $bg-grey right;
+  background: $bg-grey ;
 }
 .form__data-required {
   font-family: $font-open-sans;
@@ -133,49 +140,72 @@ label {
 @media (min-width: 1151px) {
   .form__text {
     width: 700px;
-    margin: 145px auto 45px;
+    margin: 107px auto 0;
     font-size: 17px;
     line-height: 30px;
   }
   .form h2 {
-    width: 175px;
+    width: 150px;
+    padding-top: 13px;
     font-size: 17px;
     vertical-align: top;
+    text-align: center;
   }
   .form__detail {
     width: 770px;
   }
   .form__type  {
     @include desktop-widths;
-    padding-top: 75px;
+    padding-top: 56px;
     height: 178px;
   }
   .form__color {
     @include desktop-widths;
-    padding-top: 75px;
+    height: 191px;
+    padding-top: 61px;
   }
   .form__color label {
-    width: 27%;
+    width: 27.5%;
   }
   .form__data {
     @include desktop-widths;
-    padding-top: 75px;
+    height: 269px;
+    padding-top: 53px;
+  }
+  .form__data label {
+    height: 76px;
+    margin-bottom: 0;
+  }
+  .form__data .form__detail {
+    width: 700px;
   }
   .form__contact-tel, .form__contact-mail {
     @include desktop-widths;
-    padding-top: 75px;
+    height: 73px;
+  }
+  .form__contact-tel {
+    padding-top: 53px;
+    padding-bottom: 0;
+  }
+  .form__contact-mail {
+    height: 122px;
+  }
+  .form__contact-tel h2, .form__contact-mail h2 {
+    margin-right: -25px;
   }
   .form__add {
     @include desktop-widths;
     flex-wrap: wrap;
-    padding-top: 75px;
+    height: 377px;
+    padding-top: 66px;
   }
   .form__add textarea {
     width: 700px;
     height: 138px;
     margin-bottom: 80px;
-    border-color: #000000;
+    border: 2px solid #000000;
     outline: none;
+    box-sizing: border-box;
   }
   .form input, label {
     font-size: 19px;
@@ -184,59 +214,83 @@ label {
     height: auto;
   }
   .form__send {
-    margin-top: -32px;
-    margin-bottom: 70px;
+    margin-top: -67px;
+    margin-bottom: 95px;
     margin-left: 175px;
     order: 2;
+    width: 231px;
+    font-size: 17px;
+    padding: 0 10px;
   }
   .form__data-required {
     justify-content: flex-end;
-    width: 100%;
+    width: 96%;
     display: inline-flex;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1150px) {
   .form__text {
-    width: 700px;
-    margin: 145px auto 45px;
+    width: 669px;
+    margin: 67px auto 44px;
     font-size: 17px;
     line-height: 30px;
   }
   .form h2 {
-    width: 162px;
+    width: 141px;
     font-size: 17px;
     vertical-align: top;
+    padding-top: 13px;
   }
   .form__detail {
     width: 500px;
   }
   .form__type  {
     @include tablet-widths;
-    height: 178px;
+    height: 191px;
+    padding-top: 13px;
   }
   .form__color {
     @include tablet-widths;
-    padding-top: 75px;
+    height: 326px;
+    padding-top: 62px;
   }
   .form__data {
     @include tablet-widths;
-    padding-top: 75px;
+    height: 322px;
+    padding-top: 51px;
+  }
+  .form__data label {
+    height: 51px;
+  }
+  .form__data input[placeholder] {
+    margin-top: 12px;
+    height: 23px;
+    padding-top: 0;
   }
   .form__contact-tel, .form__contact-mail {
-    @include  tablet-widths;;
-    padding-top: 75px;
+    @include  tablet-widths;
+    height: 124px;
+  }
+  .form__contact-tel .form__detail, .form__contact-mail .form__detail {
+    width: 700px;
+  }
+  .form__contact-tel {
+    padding-top: 48px;
+  }
+  .form__contact-mail {
+    padding-top: 48px;
   }
   .form__add {
     @include tablet-widths;
     flex-wrap: wrap;
-    padding-top: 75px;
+    padding-top: 63px;
   }
   .form__add textarea {
-    width: 500px;
-    height: 138px;
-    margin-bottom: 80px;
-    border-color: #000000;
+    width: 700px;
+    height: 109px;
+    margin-bottom: 34px;
+    border: 2px solid #000000;
     order: 1;
   }
   .form input, label {
@@ -246,12 +300,18 @@ label {
     width: 41%;
   }
   .form__add input, label {
+    margin-right: 0;
     height: auto;
+  }
+  .form__add .form__detail {
+    width: 527px;
   }
   .form__send {
     margin-top: -36px;
-    margin-bottom: 70px;
+    margin-bottom: 54px;
     order: 2;
+    width: 230px;
+    padding: 15px 21px;
   }
   .form__data-required {
     justify-content: flex-end;
@@ -270,39 +330,65 @@ label {
   }
   .form__text {
     max-width: 260px;
-    margin: 30px auto 30px;
+    margin: 21px auto 0;
     font-size: 13px;
     line-height: 24px;
   }
   .form h2 {
     width: 162px;
     margin-bottom: 20px;
+    padding-left: 10px;
     font-size: 17px;
     vertical-align: top;
   }
   .form__detail {
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+  }
+  .form label {
+    padding-left: 0;
   }
   .form__type  {
     @include mobile-widths;
-    padding-top: 25px;
-    height: 178px;
+    width: auto;
+    padding-top: 20px;
+    height: 171px;
+  }
+  .form__type label:before {
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
+  }
+  .form input, label {
+    margin-bottom: 15px;
+  }
+  .form__type input[type=radio]:checked + label:before {
+    font-size: 56px;
+    line-height: 32px;
+  }
+  .form__color input[type=checkbox]:checked + label:before {
+    background-size: 66%;
   }
   .form__type span {
     width: 200px;
+    padding-top: 10px;
     line-height: 20px;
   }
   .form__color {
     @include mobile-widths;
-    padding-top: 25px;
+    width: auto;
   }
   .form__color label:before {
     background-color: #ffffff;
   }
+  .form__color label:before {
+    width: 35px;
+    height: 37px;
+  }
   .form__data {
     @include mobile-widths;
-    padding-top: 25px;
+    width: auto;
   }
   .form__data label {
     flex-wrap: wrap;
@@ -311,18 +397,28 @@ label {
   .form__contact-tel, .form__contact-mail {
     @include  mobile-widths;
     padding-top: 25px;
+    width: auto;
   }
   .form__add {
     @include mobile-widths;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 47px;
     padding-top: 25px;
+    width: auto;
+  }
+  .form input[placeholder], .form__add textarea {
+    margin-bottom: -7px;
+    padding: 0 0 16px;
+    font-size: 17px;
   }
   .form__add textarea {
     width: 100%;
-    height: 138px;
-    border-color: #000000;
+    height: 144px;
+    padding: 15px;
+    border: 2px solid #000000;
     order: 1;
+    box-sizing: border-box;
   }
   .form input, label {
     width: 100%;
@@ -338,14 +434,14 @@ label {
   }
   .form__add h2 {
     order: 1;
+    margin-bottom: 28px;
   }
   .form__add .form__detail {
     order: 2;
   }
   .form__send {
     width: 100%;
-    margin-top: 16px;
-    margin-bottom: 70px;
+    margin: -1px 4px 11px 11px;
     padding: 15px 20px;
     order: 3;
   }
@@ -353,8 +449,9 @@ label {
     justify-content: flex-end;
     width: 100%;
     display: inline-flex;
+    padding: 20px 0;
     font-size: 14px;
-    line-height: 5px;
+    line-height: 12px;
   }
 }
 

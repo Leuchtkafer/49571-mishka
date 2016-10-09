@@ -44,7 +44,7 @@
   }
   .page-advantages__plus {
     width: 48.5%;
-    padding: 33px 1px 0px 4px;
+    padding: 33px 1px 0 4px;
     display: inline-block;
   }
   .page-advantages__title {
@@ -59,10 +59,14 @@
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .page-advantages {
+    margin-top: 19px;
+    padding-top: 20px;
+    background-size: 120%;
+  }
+  .page-advantages__container {
     @include mobile-widths;
     width: 260px;
     padding-top: 30px;
-    padding-bottom: 60px;
   }
   .page-advantages__title {
     font-size: 25px;

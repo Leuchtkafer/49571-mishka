@@ -77,9 +77,17 @@
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  .page-subsections {
+    height: 205px;
+    box-sizing: border-box;
+  }
   .page-subsections__interior, .page-subsections__toys {
     width: 100%;
-    background-image: none;
+    height: 104px;
+  }
+  .page-subsections a {
+    padding: 27px 0 30px 27px;
+    line-height: 21px;
   }
   .page-subsections::after {
     display: none;

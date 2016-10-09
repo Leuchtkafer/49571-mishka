@@ -73,6 +73,7 @@
   font-size: 17px;
   line-height: 16px;
   border: none;
+  outline: none;
 }
 .element-invisible {
   display: none;
@@ -85,11 +86,13 @@
     box-sizing: border-box;
   }
   .modal__title {
+    padding: 34px 0 0;
     font-size: 30px;
     line-height: 57px;
   }
   .modal__subtitle {
-    padding-bottom: 25px;
+    height: 19px;
+    padding-bottom: 6px;
   }
   .modal__list {
     width: 100%;
@@ -98,13 +101,10 @@
     display: inline-flex;
     align-items: center;
     width: 115px;
-    height: 50px;
+    height: 54px;
     margin: 0;
-    padding: 15px 44px;
-    line-height: 50px;
   }
   .modal__button {
-    width: 80%;
     margin: 25px auto;
   }
 }
@@ -116,28 +116,31 @@
     box-sizing: border-box;
   }
   .modal__title {
-    padding: 35px 60px 30px;
-    font-size: 25px;
-    line-height: 30px;
+    padding: 34px 0 0;
+    font-size: 30px;
+    line-height: 57px;
   }
   .modal__subtitle {
-    padding-bottom: 25px;
+    height: 19px;
+    padding-bottom: 6px;
+  }
+  .modal__list {
+    width: 100%;
   }
   .modal__list label {
-    width: 110px;
-    height: 50px;
-    padding: 15px 44px;
-    line-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    width: 115px;
+    height: 54px;
+    margin: 0;
   }
   .modal__button {
-    width: 80%;
     margin: 25px auto;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .modal {
-    width: 100%;
     height: 339px;
     padding: 0 105px;
     box-sizing: border-box;
@@ -150,11 +153,19 @@
   .modal__subtitle {
     padding-bottom: 25px;
   }
+  .modal__list {
+    width: 260px;
+    margin: 0 auto;
+  }
   .modal__list label {
-    width: 110px;
+    display: inline-flex;
+    align-items: center;
+    width: 80px;
     height: 50px;
-    padding: 15px 44px;
-    line-height: 50px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    justify-content: center;
   }
   .modal__button {
     width: 80%;

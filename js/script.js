@@ -58,15 +58,27 @@ navToggle.addEventListener('click', function() {
 
 //Модальное окно
 
-var makeOrder = document.querySelector('.make-order');
+          //Открыть модальное окно
+
+function toMakeOrder(){
+  var makeOrder = document.querySelectorAll('.make-order');
+  var modalWindow = document.querySelector('.modal');
+  var modalShadow = document.querySelector('.modal-shadow');
+
+  for ( var i = 0; i < makeOrder.length; i++){
+    makeOrder[i].addEventListener('click', function(e){
+      e.preventDefault();
+      modalWindow.classList.remove('element-invisible');
+      modalShadow.classList.remove('element-invisible');
+    })
+  }
+}
+toMakeOrder();
+
+          //Закрыть модальное окно
+
 var modalWindow = document.querySelector('.modal');
 var modalShadow = document.querySelector('.modal-shadow');
-
-makeOrder.addEventListener('click', function() {
-  event.preventDefault();
-  modalWindow.classList.remove('element-invisible');
-  modalShadow.classList.remove('element-invisible');
-});
 
 modalShadow.addEventListener('click', function() {
   modalWindow.classList.add('element-invisible');
