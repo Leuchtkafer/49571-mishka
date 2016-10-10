@@ -15,10 +15,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url(/img/bg-zigzag-fill.svg) repeat-x bottom;
+  background: url(../img/bg-zigzag-fill.svg) repeat-x bottom;
 }
 .page-subsections__interior {
-  background: url(/img/icon-interior.svg) no-repeat $turquoise;
+  background: url(../img/icon-interior.svg) no-repeat $turquoise;
   background-position: right 35px top 28px;
 }
 .page-subsections__interior:hover a, .page-subsections__toys:hover a {
@@ -50,7 +50,7 @@
   box-sizing: border-box;
 }
 .page-subsections__toys {
-  background: url(/img/icon-toy.svg) no-repeat $dark-turquoise;
+  background: url(../img/icon-toy.svg) no-repeat $dark-turquoise;
   background-position: right 35px top 28px;
 }
 
@@ -61,7 +61,7 @@
 
 @media (min-width: 1151px) {
   .page-subsections {
-    padding: 0px 11.30%;
+    padding: 0 11.30%;
   }
   .page-subsections__interior, .page-subsections__toys {
     width: 50%;

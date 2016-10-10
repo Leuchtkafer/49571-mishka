@@ -3,10 +3,10 @@
   flex-wrap: wrap;
   font-family: $font-open-sans;
   color: $font-color-grey;
-  background: url(/img/review@1x.jpg) no-repeat;
+  background: url(../img/review@1x.jpg) no-repeat;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: url(/img/review@2x.jpg) no-repeat;
+    background: url(../img/review@2x.jpg) no-repeat;
     background-size: 345px 100%;
   }
 }
