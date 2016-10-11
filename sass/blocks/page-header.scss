@@ -4,7 +4,7 @@
   background: url(../img/hero-desktop@1x.jpg);
   @include header-back;
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url(../img/hero-desktop@2x.jpg);
     background-color: #f1f1f1;
     background-position: -170px 91px;
@@ -27,6 +27,8 @@
   fill: #cccccc;
 }
 .page-header__list--cart {
+  -webkit-box-flex: 0.17;
+  -ms-flex-positive: 0.17;
   flex-grow: 0.17;
   position: relative;
 }
@@ -36,22 +38,35 @@
   text-align: center;
 }
 .page-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   background-color: #ffffff;
   border-bottom: 1px solid #e7e7e7;
 }
 .page-header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #ffffff;
 }
 .page-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   list-style: none;
 }
 .page-header__list li {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -74,15 +89,21 @@
   border-right: none;
 }
 .page-header__list li:nth-child(4) a {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 .page-header__list li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
   text-decoration: none;
   font-family: $font-open-sans-bold;
   color: $font-color-black;
   font-size: 17px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .page-header__logo {
@@ -97,15 +118,23 @@
   opacity: 0.2;
 }
 .page-header__sublist {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: 15px;
 }
 .page-header__sublist li:nth-child(1){
+  -webkit-box-flex: 1.5;
+  -ms-flex-positive: 1.5;
   flex-grow: 1.5;
 }
 .page-header__sublist li:nth-child(2){
+  -webkit-box-flex: 12;
+  -ms-flex-positive: 12;
   flex-grow: 12;
 }
 .page-header__sublist a {
@@ -131,7 +160,7 @@
   .page-header--sub {
     height: 360px;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url(../img/bg-zigzag-fill.svg) #f1f1f1 repeat-x bottom;
     }
   }
@@ -167,7 +196,7 @@
   .page-header--sub {
     height: 320px;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url(../img/bg-zigzag-fill.svg) #f1f1f1 repeat-x bottom;
     }
   }
@@ -223,6 +252,8 @@
   .page-header__list li a {
     height: 100%;
     line-height: 90px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     font-size: 17px;
   }
@@ -234,7 +265,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../img/hero-mobile@2x.jpg);
       background-color: #f9f9f9;
       background-position: 50% 68px;
@@ -243,7 +274,7 @@
   .page-header--sub {
     height: 256px;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #f1f1f1;
     }
   }
@@ -317,10 +348,14 @@
     width: 100%;
   }
   .page-header__list li:nth-child(4) a {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     padding-left: 23px;
   }
   .page-header__list li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 80px;
     padding-left: 75px;
@@ -364,4 +399,3 @@
     background: url(../img/icon-menu-close.svg) no-repeat;
   }
 }
-
