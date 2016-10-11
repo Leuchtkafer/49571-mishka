@@ -35,6 +35,16 @@
 #icon-insta, #icon-fb, #icon-twitter:active {
   fill: #bde3dd;
 }
+.page-footer__develop--text {
+  display: inline-flex;
+  height: 100%;
+  vertical-align: top;
+  padding-right: 26px;
+}
+.icon-htmlacademy {
+  display: inline-flex;
+  padding-right: 7px;
+}
 
 @media (min-width: 1151px) {
   .page-footer {
