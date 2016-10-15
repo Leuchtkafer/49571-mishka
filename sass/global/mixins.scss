@@ -35,15 +35,16 @@
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 6.51%;
+  padding: 0 37px;
   box-sizing: border-box;
 }
 
 @mixin desktop-widths {
   width: 100%;
-  max-width: 1050px;
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 0 4.35%;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 @mixin header-back {

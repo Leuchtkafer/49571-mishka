@@ -4,15 +4,18 @@
 }
 .page-footer__container {
   display: flex;
+  height: 100%;
 }
 .page-footer__develop {
   width: 39%;
   text-align: right;
   font-family: $font-open-sans-bold;
   font-size: 18px;
-  padding-top: 3px;
 }
 .page-footer__develop--link {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
   color: $font-color-black;
   text-decoration: none;
 }
@@ -28,18 +31,28 @@
   margin-left: 20px;
   vertical-align: middle;
 }
-#icon-insta, #icon-fb, #icon-twitter:hover {
+.icon-htmlacademy {
+  padding-left: 30px;
+  fill: #63d1bb;
+}
+.icon-insta:hover, .icon-fb:hover, .icon-twitter:hover {
   fill: #46c1ae;
 }
-
-#icon-insta, #icon-fb, #icon-twitter:active {
+.icon-insta:active, .icon-fb:active, .icon-twitter:active {
+  fill: #bde3dd;
+}
+.page-footer__develop--link:hover .icon-htmlacademy {
+  fill: #46c1ae;
+}
+.page-footer__develop--active:hover .icon-htmlacademy {
   fill: #bde3dd;
 }
 .page-footer__develop--text {
   display: inline-flex;
   height: 100%;
-  vertical-align: top;
+  margin-bottom: 11px;
   padding-right: 26px;
+  vertical-align: middle;
 }
 .icon-htmlacademy {
   display: inline-flex;
@@ -49,7 +62,6 @@
 @media (min-width: 1151px) {
   .page-footer {
     height: 143px;
-    line-height: 143px;
   }
   .page-footer__container {
     @include desktop-widths;
@@ -58,10 +70,17 @@
 @media (min-width: 768px) and (max-width: 1150px) {
   .page-footer {
     height: 143px;
-    line-height: 143px;
   }
   .page-footer__container {
     @include tablet-widths;
+  }
+  .page-footer__logo {
+    width: 41%;
+    padding-left: 14px;
+  }
+  .icon-htmlacademy {
+    padding-right: 13px;
+    padding-left: 34px;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -72,6 +91,7 @@
     height: 100%;
     flex-wrap: wrap;
     @include mobile-widths;
+    width: auto;
   }
   .page-footer__develop {
     width: 100%;

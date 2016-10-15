@@ -3,6 +3,10 @@
   color: $font-color-grey;
   display: flex;
 }
+.product-week__wrapper {
+  display: flex;
+  position: relative;
+}
 .product-week__price {
   display: block;
   text-align: center;
@@ -18,6 +22,12 @@
   text-transform: uppercase;
   text-align: center;
 }
+.product-week__table-size {
+  border-collapse: collapse;
+}
+.product-week__table-size tr {
+  border-bottom: 1px solid #ececec;
+}
 .product-week__order {
   @include black-white-btn;
 }
@@ -30,9 +40,10 @@
 
 @media (min-width: 1151px) {
     .product-week {
-      @include desktop-widths;
-      position: relative;
       margin: 54px auto 73px;
+    }
+    .product-week__wrapper {
+      @include desktop-widths;
     }
     .product-week__detail {
       width: 700px;
@@ -40,52 +51,53 @@
     }
     .product-week__title {
       width: 100%;
-      padding: 53px 0 49px;
+      margin-left: -3px;
+      padding: 52px 0 48px 0;
       font-size: 53px;
       line-height: 57px;
     }
    .product-week__subtitle {
      width: 172px;
-     padding: 68px 53px 0 45px;
+     padding: 68px 55px 0 45px;
      vertical-align: top;
      box-sizing: border-box;
      line-height: 16px;
     }
   .product-week__description {
     width: 292px;
-    padding-left: 5px;
+    padding-left: 1px;
     font-size: 17px;
     line-height: 30px;
   }
   .product-week__table-size {
-    margin-top: 44px;
+    width: 300px;
+    margin-top: 47px;
     font-size: 15px;
-    line-height: 19px;
   }
   .product-week__table-size td {
-    height: 40px;
-    margin-right: 20px;
-    padding-right: 30px;
+    height: 39px;
+    padding-left: 2px;
+    padding-bottom: 1px;
   }
   .product-week_image {
     position: absolute;
-    right: 5.5%;
+    right: 4.7%;
     top: 0;
     height: 100%;
     z-index: -1;
   }
   .product-week__price {
-    margin-top: 102px;
+    margin-top: 106px;
     margin-bottom: 33px;
     font-size: 20px;
-    width: 310px;
+    width: 304px;
   }
   .product-week__order {
     display: block;
     width: 189px;
     text-align: center;
-    margin-left: 3px;
-    padding-top: 17px;
+    margin-left: 2px;
+    padding-top: 16px;
     padding-left: 55px;
     padding-right: 45px;
   }
@@ -102,6 +114,7 @@
   }
   .product-week__title {
     width: 100%;
+    margin-left: 2px;
     padding: 55px 0 49px;
     text-align: left;
     font-size: 43px;
@@ -109,29 +122,30 @@
     order: 1;
   }
   .product-week__subtitle {
+    position: absolute;
+    right: 5px;
+    top: 68px;
     width: 100px;
-    padding-top: 64px;
-    vertical-align: top;
-    order: 2;
+    line-height: 15px;
   }
   .product-week__description {
     width: 294px;
+    padding-left: 6px;
     font-size: 17px;
     line-height: 30px;
   }
   .product-week picture {
     position: absolute;
-    right: 55px;
+    right: -7px;
     top: 163px;
-
   }
   .product-week__table-size {
-    margin-top: 32px;
+    margin-top: 36px;
   }
   .product-week__table-size td {
     height: 40px;
-    margin-right: 20px;
-    padding-right: 30px;
+    padding-right: 17px;
+    padding-left: 6px;
   }
   .product-week_image {
     width: 334px;
@@ -139,26 +153,32 @@
   }
   .product-week__price {
     margin-top: 50px;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
     font-size: 20px;
-    width: 300px;
+    width: 311px;
   }
   .product-week__order {
     display: block;
     width: 189px;
+    margin-left: 6px;
     text-align: center;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  .product-week {
+  .product-week__wrapper {
     @include mobile-widths;
+    width: auto;
+  }
+  .product-week {
     flex-direction: column;
-    max-width: 260px;
+  }
+  .product-week__detail {
+    padding-left: 12px;
   }
   .product-week__title {
     position: relative;
     width: 100%;
-    padding: 27px 0 45px 0;
+    padding: 30px 0 47px;
     text-align: left;
     font-size: 25px;
     line-height: 30px;
@@ -166,35 +186,39 @@
   }
   .product-week__subtitle {
     position: absolute;
-    padding-top: 61px;
+    left: 32px;
+    top: 64px;
   }
   .product-week__description {
+    padding-right: 10px;
     font-size: 15px;
     line-height: 24px;
   }
   .product-week__table-size {
-    margin-top: 30px;
+    margin-top: 23px;
   }
   .product-week__table-size tr {
     height: 30px;
   }
   .product-week__table-size td {
-    height: 25px;
+    height: 36px;
     padding-right: 25px;
     font-size: 15px;
   }
   .product-week_image {
-    margin-top: 30px;
-    width: 100%;
+    margin-top: 33px;
+    width: 97%;
   }
   .product-week__price {
-    margin-top: 25px;
-    margin-bottom: 33px;
+    margin-top: 19px;
+    margin-bottom: 26px;
     font-size: 17px;
     line-height: 24px;
+    width: 252px;
   }
   .product-week__order {
     display: block;
+    width: 154px;
     text-align: center;
   }
 }

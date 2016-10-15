@@ -15,7 +15,7 @@
 }
 .form input, label {
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-family: $font-open-sans-bold;
   outline: none;
   line-height: 44px;
@@ -30,7 +30,7 @@
 .form label {
   cursor: pointer;
   position: relative;
-  padding-left: 25px;
+  padding-left: 11px;
   margin-right: 15px;
 }
 .icon-phone, .icon-mail {
@@ -104,6 +104,12 @@
 .form__data input:focus, .form__contact-tel input:focus, .form__contact-mail input:focus, .form__add textarea:focus {
   border-color: #62d1ba;
 }
+.form__contact-tel label:hover .icon-phone, .form__contact-mail label:hover .icon-mail {
+  fill: #46c1ae;
+}
+.form__contact-tel label:active .icon-phone, .form__contact-mail label:active .icon-mail {
+  fill: #bde3dd;
+}
 .form__contact-tel input {
   background: $bg-grey;
 }
@@ -111,7 +117,7 @@
   background: $bg-grey ;
 }
 .form__data-required {
-  font-family: $font-open-sans;
+    font-family: $font-open-sans;
     color: $font-color-grey;
 }
 .form__send {
@@ -140,12 +146,12 @@
 @media (min-width: 1151px) {
   .form__text {
     width: 700px;
-    margin: 107px auto 0;
+    margin: 104px auto 0;
     font-size: 17px;
     line-height: 30px;
   }
   .form h2 {
-    width: 150px;
+    width: 162px;
     padding-top: 13px;
     font-size: 17px;
     vertical-align: top;
@@ -157,35 +163,49 @@
   .form__type  {
     @include desktop-widths;
     padding-top: 56px;
-    height: 178px;
+    height: 236px;
   }
   .form__color {
     @include desktop-widths;
-    height: 191px;
+    height: 251px;
     padding-top: 61px;
   }
+  .form__color .form__detail {
+    width: 84%;
+  }
   .form__color label {
-    width: 27.5%;
+    width: 26.5%;
   }
   .form__data {
     @include desktop-widths;
-    height: 269px;
-    padding-top: 53px;
+    height: 322px;
+    padding-top: 49px;
   }
   .form__data label {
     height: 76px;
     margin-bottom: 0;
   }
+  .form__data span {
+    padding-top: 4px;
+    padding-left: 4px;
+  }
   .form__data .form__detail {
     width: 700px;
+  }
+  .form__contact--content {
+    height: 250px;
   }
   .form__contact-tel, .form__contact-mail {
     @include desktop-widths;
     height: 73px;
   }
   .form__contact-tel {
-    padding-top: 53px;
+    height: 130px;
+    padding-top: 54px;
     padding-bottom: 0;
+  }
+  .form__contact-tel label, .form__contact-mail label {
+    height: 74px;
   }
   .form__contact-mail {
     height: 122px;
@@ -196,12 +216,12 @@
   .form__add {
     @include desktop-widths;
     flex-wrap: wrap;
-    height: 377px;
-    padding-top: 66px;
+    height: 442px;
+    padding-top: 64px;
   }
   .form__add textarea {
     width: 700px;
-    height: 138px;
+    height: 141px;
     margin-bottom: 80px;
     border: 2px solid #000000;
     outline: none;
@@ -214,17 +234,18 @@
     height: auto;
   }
   .form__send {
-    margin-top: -67px;
-    margin-bottom: 95px;
+    margin-top: -93px;
     margin-left: 175px;
     order: 2;
     width: 231px;
     font-size: 17px;
     padding: 0 10px;
+    height: 52px;
   }
   .form__data-required {
     justify-content: flex-end;
-    width: 96%;
+    width: 94.2%;
+    padding-top: 4px;
     display: inline-flex;
   }
 }
@@ -232,7 +253,7 @@
 @media (min-width: 768px) and (max-width: 1150px) {
   .form__text {
     width: 669px;
-    margin: 67px auto 44px;
+    margin: 54px auto 44px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -240,7 +261,13 @@
     width: 141px;
     font-size: 17px;
     vertical-align: top;
-    padding-top: 13px;
+    padding-top: 14px;
+  }
+  .form__color h2, .form__data-title, .form__contact-title, .form__contact-title {
+    padding-left: 15px;
+  }
+  .form label {
+    padding-left: 24px;
   }
   .form__detail {
     width: 500px;
@@ -248,7 +275,7 @@
   .form__type  {
     @include tablet-widths;
     height: 191px;
-    padding-top: 13px;
+    padding: 13px 50px 0;
   }
   .form__color {
     @include tablet-widths;
@@ -261,12 +288,15 @@
     padding-top: 51px;
   }
   .form__data label {
-    height: 51px;
+    height: 55px;
   }
   .form__data input[placeholder] {
     margin-top: 12px;
     height: 23px;
     padding-top: 0;
+  }
+  .form__contact--content label {
+    height: 76px;
   }
   .form__contact-tel, .form__contact-mail {
     @include  tablet-widths;
@@ -276,15 +306,15 @@
     width: 700px;
   }
   .form__contact-tel {
-    padding-top: 48px;
-  }
-  .form__contact-mail {
-    padding-top: 48px;
+    padding-top: 51px;
   }
   .form__add {
     @include tablet-widths;
     flex-wrap: wrap;
     padding-top: 63px;
+  }
+  .form__add label {
+    margin-right: 0;
   }
   .form__add textarea {
     width: 700px;
@@ -295,6 +325,9 @@
   }
   .form input, label {
     font-size: 19px;
+  }
+  .form__color .form__detail {
+    width: 550px;
   }
   .form__color label {
     width: 41%;
@@ -307,17 +340,19 @@
     width: 527px;
   }
   .form__send {
-    margin-top: -36px;
+    margin-top: -38px;
     margin-bottom: 54px;
     order: 2;
     width: 230px;
     padding: 15px 21px;
+    margin-left: 12px;
   }
   .form__data-required {
     justify-content: flex-end;
     width: 100%;
+    padding-top: 4px;
     display: inline-flex;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 30px;
     order: 3;
   }
@@ -441,7 +476,7 @@
   }
   .form__send {
     width: 100%;
-    margin: -1px 4px 11px 11px;
+    margin: -5px 10px 11px 11px;
     padding: 15px 20px;
     order: 3;
   }

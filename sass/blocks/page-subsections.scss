@@ -8,6 +8,9 @@
   background-color: #f9f9f9;
   box-sizing: border-box;
 }
+.page-subsections__wrapper {
+  display: flex;
+}
 .page-subsections::after{
   content: "";
   height: 34px;
@@ -19,7 +22,7 @@
 }
 .page-subsections__interior {
   background: url(../img/icon-interior.svg) no-repeat $turquoise;
-  background-position: right 35px top 28px;
+  background-position: right 37px top 28px;
 }
 .page-subsections__interior:hover a, .page-subsections__toys:hover a {
   padding-top: 25px;
@@ -44,7 +47,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  padding: 28px 0 30px 35px;
+  padding: 26px 0 30px 35px;
   color: #ffffff;
   text-decoration: none;
   box-sizing: border-box;
@@ -60,16 +63,19 @@
 }
 
 @media (min-width: 1151px) {
-  .page-subsections {
-    padding: 0 11.30%;
+  .page-subsections__wrapper {
+    @include desktop-widths;
   }
   .page-subsections__interior, .page-subsections__toys {
     width: 50%;
   }
 }
 @media (min-width: 768px) and (max-width: 1150px) {
-  .page-subsections {
+  .page-subsections__wrapper {
     @include tablet-widths;
+    max-width: 745px;
+  }
+  .page-subsections {
     max-width: 100%;
   }
   .page-subsections__interior, .page-subsections__toys {
@@ -77,6 +83,9 @@
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  .page-subsections__wrapper {
+    flex-wrap: wrap;
+  }
   .page-subsections {
     height: 205px;
     box-sizing: border-box;
