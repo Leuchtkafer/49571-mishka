@@ -135,6 +135,7 @@
 @media (min-width: 1151px) {
   .page-header {
     height: 716px;
+    background-position: center 87px;
   }
   .page-header__container {
     @include desktop-widths;
@@ -211,6 +212,7 @@
   .page-header__list li:nth-child(2) {
     position: absolute;
   }
+
   .page-header__list li:nth-child(3) {
     width: 83px;
     height: 88px;
@@ -247,11 +249,13 @@
   .page-header__list li:first-child {
     top: 74px;
     left: -2px;
+    padding-left: 0;
     border: none;
   }
   .page-header__list li:nth-child(2) {
+    width: 184px;
     top: 74px;
-    left: -160px;
+    left: 167px;
     border: none;
   }
   .page-header__list li:nth-child(4) {
